@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 58704504375309362}
   - component: {fileID: 58394661975864396}
   - component: {fileID: 50373584738070110}
-  - component: {fileID: 114960618377342148}
+  - component: {fileID: 114339924139834054}
   m_Layer: 0
   m_Name: Test planet
   m_TagString: Untagged
@@ -348,7 +348,7 @@ EdgeCollider2D:
   m_Points:
   - {x: -0.595, y: 0}
   - {x: 0.595, y: 0}
---- !u!114 &114960618377342148
+--- !u!114 &114339924139834054
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -356,7 +356,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1878310434829218}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11e816692a1c9c143933b4034915a203, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ea296c5b482dee41bc5a92f37774e1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212090173095623916
