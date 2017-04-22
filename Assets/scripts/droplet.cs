@@ -28,7 +28,7 @@ public class droplet : MonoBehaviour {
 
 	private DropletState state;
 
-    private bool facingRight = true;
+    private bool facingRight = false;
 
     private CircleCollider2D groundCheck;
 
@@ -46,6 +46,7 @@ public class droplet : MonoBehaviour {
 
 	public delegate void GameOver();
 	public event GameOver OnGameOver;
+	private bool isJumping = false;
 
     void OnGUI()
     {
@@ -111,8 +112,12 @@ public class droplet : MonoBehaviour {
             GetComponent<Rigidbody2D>().velocity = new Vector2(move * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
         }
 
-
-        if (GetComponent<Rigidbody2D>().velocity.x != 0)
+		if (grounded) {
+			animator.SetBool("isJumping", false);		
+		} else {
+			animator.SetBool("isJumping", true);
+	    }
+		if (GetComponent<Rigidbody2D>().velocity.x != 0)
         {
             animator.SetBool("isWalking", true);
 
@@ -125,8 +130,10 @@ public class droplet : MonoBehaviour {
 		//Can't jump while in gas state
 		if (state != DropletState.Gas && state != DropletState.Ice && grounded && Input.GetButtonDown("Jump") && canMove)
         {
+			
             GetComponent<Rigidbody2D>().AddForce(new Vector2(0, JumpForce));
         }
+
 			
     }
 
