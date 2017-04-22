@@ -23,7 +23,7 @@ public class camera2d : MonoBehaviour {
     public void Start()
     {
         // Sprite = Area.transform.GetComponent<SpriteRenderer>().sprite;
-        Sprite = Resources.Load<Sprite>("sprites/bgs/lab");
+        Sprite = Resources.Load<Sprite>("sprites/bgs/space_bg");
 
         CalculatePixelUnits();
         CalculateSize();
