@@ -6,10 +6,10 @@ public class RestartLevelButtonState : ButtonState {
 
     public override void Click()
     {
-		droplet playerDroplet = GameState.GetPlayerDroplet();
-		if(playerDroplet == null)
-			return;
+		//droplet playerDroplet = GameState.GetPlayerDroplet();
+		//if(playerDroplet == null)
+		//	return;
 
-		SwitchLevel.SwitchToLevel(playerDroplet.gameObject, SceneManager.GetActiveScene().name);
+		//SwitchLevel.SwitchToLevel(playerDroplet.gameObject, SceneManager.GetActiveScene().name);
     }
 }

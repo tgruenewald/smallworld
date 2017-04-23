@@ -7,13 +7,13 @@ public class SpawnPoint : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		var playerDroplet = GameState.GetPlayerDroplet();
+		var playerDroplet = GameState.GetPlayer();
 		if (playerDroplet != null)
 		{
 			//Debug.Log("Setting droplet start pos: " + GetComponent<Transform>().position);
-			playerDroplet.StopAllAudio();
-			playerDroplet.PlayAudio(LevelAmbientSound);
-			playerDroplet.SpawnAt(this.gameObject);
+			//playerDroplet.StopAllAudio();
+			//playerDroplet.PlayAudio(LevelAmbientSound);
+			//playerDroplet.SpawnAt(this.gameObject);
 
 			var otherPlayers = GameObject.FindObjectsOfType<droplet>();
 			Debug.Log(string.Format("Amount of droplets in scene: {0}", otherPlayers.Length));

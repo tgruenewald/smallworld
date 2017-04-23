@@ -17,7 +17,7 @@ public class Hud : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		playerDroplet = GameState.GetPlayerDroplet();
+		//playerDroplet = GameState.GetPlayerDroplet();
 		if (playerDroplet != null) {
 			playerDroplet.OnLivesChanged += this.LivesChanged;
 			playerDroplet.OnPlayerKilled += this.PlayerKilled;
