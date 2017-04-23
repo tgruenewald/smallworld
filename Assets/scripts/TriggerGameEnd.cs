@@ -10,11 +10,11 @@ public class TriggerGameEnd : MonoBehaviour {
 		if (GameEndCanvas != null)
 			GameEndCanvas.enabled = false;
 		
-		playerDroplet = GameState.GetPlayerDroplet();
-		if (playerDroplet == null) {
-			var player = GameObject.FindGameObjectWithTag ("Player");
-			playerDroplet = player.GetComponent<droplet> ();
-		}
+		//playerDroplet = GameState.GetPlayerDroplet();
+		//if (playerDroplet == null) {
+		//	var player = GameObject.FindGameObjectWithTag ("Player");
+		//	playerDroplet = player.GetComponent<droplet> ();
+		//}
 	}
 
 	void OnTriggerEnter2D(Collider2D coll){
