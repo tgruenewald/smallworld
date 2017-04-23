@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212271641309827376}
   - component: {fileID: 61377476724328886}
   m_Layer: 0
-  m_Name: platform_green_red
+  m_Name: platform_green_med
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
