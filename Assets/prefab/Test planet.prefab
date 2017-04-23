@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4968029085635018}
   - component: {fileID: 114704450246497886}
   - component: {fileID: 58592947423903208}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: SizeObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 58344698190557180}
   - component: {fileID: 250511472676345072}
   - component: {fileID: 114289906254808154}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: GravityObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,6 +140,7 @@ GameObject:
   - component: {fileID: 212090173095623916}
   - component: {fileID: 58704504375309362}
   - component: {fileID: 50373584738070110}
+  - component: {fileID: 114941288981720088}
   m_Layer: 12
   m_Name: Test planet
   m_TagString: Untagged
@@ -180,7 +181,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1878310434829218}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.8, y: 13.8, z: 0}
+  m_LocalPosition: {x: 27.1, y: 6.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4682294960324030}
@@ -445,6 +446,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e6068936eec1fc4682563821c46ebcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114941288981720088
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1878310434829218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02a94ec750a7e794281bf5c3f4201da1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlanetGravity: {fileID: 114289906254808154}
+  PlanetSize: {fileID: 114704450246497886}
 --- !u!212 &212090173095623916
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -475,7 +489,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: c57a0889b9e622345a313ea3f548630e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -596,11 +610,11 @@ PointEffector2D:
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_ForceMagnitude: -5000
+  m_ForceMagnitude: -10000
   m_ForceVariation: 0
-  m_DistanceScale: 1
+  m_DistanceScale: 10
   m_ForceSource: 1
   m_ForceTarget: 0
-  m_ForceMode: 2
+  m_ForceMode: 1
   m_Drag: 0
   m_AngularDrag: 0
