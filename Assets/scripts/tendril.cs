@@ -5,7 +5,6 @@ using UnityEngine;
 public class Tendril : MonoBehaviour {
 
 	public GameObject valve;
-
 	// Use this for initialization
 	void Start () {
 		
@@ -16,11 +15,6 @@ public class Tendril : MonoBehaviour {
 		
 	}
 	void OnTriggerEnter2D(Collider2D col){
-		val v = valve.GetComponent<val>();
-		v.activate();
-
+		valve.GetComponent<Valve> ().activate ();
 	}
-
-
-
 }

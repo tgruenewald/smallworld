@@ -3,28 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Valve : MonoBehaviour {
-
 	public Animator animator;
 	bool isOpen = false;
 
 	// Use this for initialization
 	void Start () {
-		
+
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 
 	public void activate() {
 		isOpen = !isOpen;
+		SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer> ();
+		CircleCollider2D cir = gameObject.GetComponent<CircleCollider2D> ();
 		if (isOpen) {
-			SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer> ();
-			sr.sprite = Resources.Load<Sprite> ("open_valve.png");
+			sr.sprite = Resources.Load<Sprite> ("valve/open_valve");
+			cir.enabled = false;
 		} else {
-			SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer> ();
-			sr.sprite = Resources.Load<Sprite> ("close_valve.png");			
+			sr.sprite = Resources.Load<Sprite> ("valve/close_valve");			
+			cir.enabled = true;
 		}
 	}
 
