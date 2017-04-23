@@ -17,8 +17,8 @@ public class SwitchLevel : MonoBehaviour {
 
 	public static void SwitchToLevel(GameObject playerObject, string level)
 	{
-		GameState.SetPlayerDroplet(playerObject);
-		GameState.GetPlayerDroplet().StopAllAudio();
+		GameState.SetPlayer(playerObject);
+		//GameState.GetPlayer().StopAllAudio();
 		SceneManager.LoadScene(level);
 	}
 

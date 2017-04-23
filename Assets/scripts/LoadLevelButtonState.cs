@@ -7,9 +7,9 @@ public class LoadLevelButtonState : ButtonState{
 	public bool DestroyPlayer = false;
 	public override void Click (){
 		if(DestroyPlayer){
-			var player = GameState.GetPlayerDroplet();
-			if(player != null)
-				DestroyObject (player.gameObject);
+			//var player = GameState.GetPlayerDroplet();
+			//if(player != null)
+			//	DestroyObject (player.gameObject);
 		}
 		UnityEngine.SceneManagement.SceneManager.LoadScene (LevelToLoad);
 	}

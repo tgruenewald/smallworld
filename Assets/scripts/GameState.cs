@@ -5,21 +5,21 @@ using System.Collections;
 
 public static class GameState
 {
-    private static GameObject droplet = null;
+    private static GameObject player = null;
     public static GameObject introMusic = null;
 
-	public static void SetPlayerDroplet(GameObject droplet){
-		GameState.droplet = droplet;
+	public static void SetPlayer(GameObject player){
+		GameState.player = player;
 	}
 
-	public static droplet GetPlayerDroplet(){
-		if(droplet == null){
-			droplet = GameObject.FindGameObjectWithTag("Player");
-			if(droplet == null)
+	public static Player GetPlayer(){
+		if(player == null){
+			player = GameObject.FindGameObjectWithTag("Player");
+			if(player == null)
 				return null;
 		}
 
-		return droplet.GetComponent<droplet>();
+		return player.GetComponent<Player>();
 	}
 }
 
