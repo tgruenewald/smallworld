@@ -1,0 +1,34 @@
+{
+	"Name": "radio6",
+	"Sections": 
+	[
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Where's everyone else?"
+		},
+		{
+			"Icon": "Sprites/square_radio",
+			"SectionText": "They're trapped in the elevator."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Great. I'll wait for them. What's the ETA on the helicopter?"
+		},
+		{
+			"Icon": "Sprites/square_radio",
+			"SectionText": "Should be arriving ... soon. Ish."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Did you just say \"soonish\"?"
+		},
+		{
+			"Icon": "Sprites/square_radio",
+			"SectionText": "I said soon. Over."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Right ..."
+		}
+	]
+}
