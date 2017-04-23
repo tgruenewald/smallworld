@@ -1,0 +1,51 @@
+Walkthrough
+
+Level 1
+Enter as size 6
+Open YELLOW valve
+
+Enter as size 4
+Open PURPLE valve
+
+Enter as size 1.2
+Open BLUE valve
+
+Level 2
+
+
+Enter as size 6
+Open GREEN valve
+
+Enter as size 1.2
+Open RED valve
+
+**optional YELLOW area; enter as size 6 to unlock; most likely you want to delete yellow areas from game to avoid confusion**
+
+Enter as size 4
+Open PURPLE valve
+
+Enter as any size
+Open BLUE valve
+Pick up alien part
+
+
+Level 3
+Enter as size 1.2
+Open GREEN valves
+
+Enter as size 6
+Open PURPLE valves
+Open YELLOW valves
+Open RED valve
+Open BLACK valves
+
+Enter as size 2
+Close GREEN valves
+Open PINK valves
+
+Enter as any size
+Open WHITE valves
+
+Enter as size 0.5
+Jump to alien head
+Can open BLUE valve, optional
