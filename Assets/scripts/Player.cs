@@ -10,6 +10,11 @@ public class Player : MonoBehaviour
     private bool isGrounded;
     public bool IsGrounded { get { return isGrounded; } }
     public Collider2D GroundCheck;
+
+	// animation
+	private bool facingRight = false;
+	private Animator animator;
+	public bool DEBUG_GROUNDED;
     //private float nextJumpTime = 0.0f;
 
     public GameObject CurrentPlanet { get { return currentPlanet; } }
@@ -18,14 +23,17 @@ public class Player : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
+		GroundCheck = GetComponent<CircleCollider2D>();
         Camera.main.GetComponent<SmoothCamera>().target = gameObject;
+		animator = GetComponent<Animator>();
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
         PerformGroundCheck();
-
+		DEBUG_GROUNDED = IsGrounded;
+		animator.SetBool("isWalking", false);
         if(currentPlanet != null)
         {
             this.transform.up = -(currentPlanet.transform.position - this.transform.position);
@@ -39,6 +47,10 @@ public class Player : MonoBehaviour
         {
             //GetComponent<Rigidbody2D>().AddForce(transform.right * Speed);
             transform.position += transform.right * (Speed * Time.deltaTime);
+			if (!facingRight) {
+				Flip ();
+			}
+			animator.SetBool("isWalking", true);
             //			var V =  GetComponent<Rigidbody2D>();
             //			Vector3 direction = V.rotation * Vector3.right;
             //			//var direction = transform.rotation;
@@ -53,12 +65,23 @@ public class Player : MonoBehaviour
         {
             //GetComponent<Rigidbody2D>().AddForce(-(transform.right) * Speed);
             transform.position -= transform.right * (Speed * Time.deltaTime);
+			if (facingRight) {
+				Flip ();
+			}
+			animator.SetBool("isWalking", true);
         }
         if (Input.GetKey(KeyCode.W) && IsGrounded /*&& nextJumpTime <= Time.time*/)
         {
             GetComponent<Rigidbody2D>().AddForce(transform.up * JumpStrength);
             //transform.position += transform.up * JumpStrength;
         }
+		// animation control
+		if (IsGrounded) {
+			animator.SetBool("isJumping", false);		
+		} else {
+			animator.SetBool("isJumping", true);
+		}
+
     }
 
     private void PerformGroundCheck()
@@ -68,7 +91,7 @@ public class Player : MonoBehaviour
         //    isGrounded = false;
         //    return;
         //}
-        //isGrounded = GroundCheck.IsTouchingLayers(WhatIsGround);
+        isGrounded = GroundCheck.IsTouchingLayers(WhatIsGround);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -88,4 +111,12 @@ public class Player : MonoBehaviour
             isGrounded = false;
         }
     }
+	void Flip()
+	{
+		//Debug.Log("switching...");
+		facingRight = !facingRight;
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
+	}
 }
