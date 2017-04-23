@@ -18,7 +18,7 @@ public class Valve : MonoBehaviour {
 	public void activate() {
 		isOpen = !isOpen;
 		SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer> ();
-		CircleCollider2D cir = gameObject.GetComponent<CircleCollider2D> ();
+		Collider2D cir = gameObject.GetComponent<CapsuleCollider2D> ();
 		Animator animator = gameObject.GetComponent<Animator> ();
 		if (isOpen) {
 			sr.sprite = Resources.Load<Sprite> ("valve/open_valve");

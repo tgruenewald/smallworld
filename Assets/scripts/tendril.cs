@@ -5,6 +5,7 @@ using UnityEngine;
 public class Tendril : MonoBehaviour {
 
 	public GameObject valve;
+	bool hasExited = true;
 	// Use this for initialization
 	void Start () {
 		
@@ -15,6 +16,21 @@ public class Tendril : MonoBehaviour {
 		
 	}
 	void OnTriggerEnter2D(Collider2D col){
-		valve.GetComponent<Valve> ().activate ();
+		Debug.Log("entered");
+		
+		if (hasExited) {
+			Animator animator = gameObject.GetComponent<Animator> ();
+			animator.SetBool("play", true);
+			valve.GetComponent<Valve> ().activate ();			
+			hasExited = false;
+		}
+
 	}
+	
+	void OnTriggerExit2D(Collider2D col){
+		Debug.Log("exited");
+		Animator animator = gameObject.GetComponent<Animator> ();
+		animator.SetBool("play", false);		
+		hasExited = true;
+	}	
 }
