@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212261439592225610}
   - component: {fileID: 61282547341651350}
   m_Layer: 0
-  m_Name: platform_med_brown
+  m_Name: platform_red_med
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 4d803acd79d4be64fad56dc886d2e3aa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2ac27dcc9d1326a4a86f423a0f9f5df3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
