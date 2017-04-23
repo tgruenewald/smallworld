@@ -450,7 +450,7 @@ PointEffector2D:
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_ForceMagnitude: -10000
+  m_ForceMagnitude: -15000
   m_ForceVariation: 0
   m_DistanceScale: 10
   m_ForceSource: 1
@@ -472,7 +472,7 @@ CircleCollider2D:
   m_UsedByEffector: 1
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 20
+  m_Radius: 10
 --- !u!114 &878589611 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114704450246497886, guid: 9cea2ff4a69a2044a8561d5b700c7ca8,
@@ -582,9 +582,9 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.5, y: -0.93}
   serializedVersion: 2
-  m_Radius: 7.3
+  m_Radius: 5.28
 --- !u!212 &1016547313
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -819,7 +819,7 @@ PointEffector2D:
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_ForceMagnitude: -10000
+  m_ForceMagnitude: -15000
   m_ForceVariation: 0
   m_DistanceScale: 10
   m_ForceSource: 1
@@ -841,7 +841,7 @@ CircleCollider2D:
   m_UsedByEffector: 1
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 20
+  m_Radius: 12.5
 --- !u!1001 &1379029556
 Prefab:
   m_ObjectHideFlags: 0
@@ -1176,7 +1176,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1633271166}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.4, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1016547314}
@@ -1196,7 +1196,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 8
+  m_Radius: 5.65
 --- !u!114 &1633271169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1264,6 +1264,21 @@ Prefab:
         type: 2}
       propertyPath: m_BodyType
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 58344698190557180, guid: 9cea2ff4a69a2044a8561d5b700c7ca8,
+        type: 2}
+      propertyPath: m_Radius
+      value: 12.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 250511472676345072, guid: 9cea2ff4a69a2044a8561d5b700c7ca8,
+        type: 2}
+      propertyPath: m_ForceMagnitude
+      value: -15000
+      objectReference: {fileID: 0}
+    - target: {fileID: 58592947423903208, guid: 9cea2ff4a69a2044a8561d5b700c7ca8,
+        type: 2}
+      propertyPath: m_Radius
+      value: 7.76
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9cea2ff4a69a2044a8561d5b700c7ca8, type: 2}
