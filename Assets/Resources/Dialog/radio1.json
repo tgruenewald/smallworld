@@ -1,0 +1,10 @@
+{
+	"Name": "radio1",
+	"Sections": 
+	[
+		{
+			"Icon": "Sprites/square_radio",
+			"SectionText": "This is Captain Arugua. Can anyone hear me? Over."
+		}
+	]
+}
