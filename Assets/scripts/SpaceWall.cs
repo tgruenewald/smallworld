@@ -15,7 +15,9 @@ public class SpaceWall : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
-		SceneManager.LoadScene("outer_space");   
+        //Debug.Log(string.Format("{0} touched space wall {1}", coll.gameObject.name, this.name));
+        if (coll.gameObject.tag != "Player")
+            return;
+        SceneManager.LoadScene("outer_space"); 
 	}
-
 }
