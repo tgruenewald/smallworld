@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Valve : MonoBehaviour {
+	public Animator animator;
 	bool isOpen = false;
 
 	// Use this for initialization
@@ -19,17 +20,16 @@ public class Valve : MonoBehaviour {
 		isOpen = !isOpen;
 		SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer> ();
 		CircleCollider2D cir = gameObject.GetComponent<CircleCollider2D> ();
-		Animator animator = gameObject.GetComponent<Animator> ();
 		if (isOpen) {
 			sr.sprite = Resources.Load<Sprite> ("valve/open_valve");
 			cir.enabled = false;
-			animator.SetBool ("isOpen", true);
 		} else {
 			sr.sprite = Resources.Load<Sprite> ("valve/close_valve");			
 			cir.enabled = true;
-			animator.SetBool ("isOpen", false);
 		}
 	}
 
-
+	public Animator getAnimation() {
+		return animator;
+	}
 }
