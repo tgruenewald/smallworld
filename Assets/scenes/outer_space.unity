@@ -227,6 +227,24 @@ EdgeCollider2D:
   - {x: -0.3303709, y: -0.13796616}
   - {x: 0.15080166, y: -2.6109276}
   - {x: 1.1228304, y: -4.3917427}
+--- !u!1 &382418684 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1878310434829218, guid: 9cea2ff4a69a2044a8561d5b700c7ca8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1379029556}
+--- !u!114 &382418685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 382418684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02a94ec750a7e794281bf5c3f4201da1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlanetGravity: {fileID: 1165019052}
+  PlanetSize: {fileID: 878589611}
 --- !u!1 &508478826
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,7 +320,7 @@ GameObject:
   - component: {fileID: 832256740}
   - component: {fileID: 832256742}
   - component: {fileID: 832256741}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: SizeObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -362,7 +380,7 @@ GameObject:
   - component: {fileID: 869935921}
   - component: {fileID: 869935920}
   - component: {fileID: 869935919}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: GravityObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -431,6 +449,12 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 20
+--- !u!114 &878589611 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114704450246497886, guid: 9cea2ff4a69a2044a8561d5b700c7ca8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1379029556}
+  m_Script: {fileID: 11500000, guid: 2e6068936eec1fc4682563821c46ebcf, type: 3}
 --- !u!1 &993120775
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,6 +517,7 @@ GameObject:
   - component: {fileID: 1016547313}
   - component: {fileID: 1016547312}
   - component: {fileID: 1016547311}
+  - component: {fileID: 1016547315}
   m_Layer: 12
   m_Name: Test planet (3)
   m_TagString: Untagged
@@ -589,6 +614,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1016547315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1016547310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02a94ec750a7e794281bf5c3f4201da1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlanetGravity: {fileID: 1378427746}
+  PlanetSize: {fileID: 1633271169}
 --- !u!1 &1105789303
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,6 +731,12 @@ MonoBehaviour:
   followDistance: 0
   target: {fileID: 0}
   offset: {x: 0, y: 0, z: 0}
+--- !u!114 &1165019052 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114289906254808154, guid: 9cea2ff4a69a2044a8561d5b700c7ca8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1379029556}
+  m_Script: {fileID: 11500000, guid: 87d5344fc81c8a342ae2a2ea5c10960a, type: 3}
 --- !u!1 &1378427744
 GameObject:
   m_ObjectHideFlags: 0
@@ -705,7 +749,7 @@ GameObject:
   - component: {fileID: 1378427748}
   - component: {fileID: 1378427747}
   - component: {fileID: 1378427746}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: GravityObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -823,7 +867,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1275797813410674, guid: 9cea2ff4a69a2044a8561d5b700c7ca8, type: 2}
       propertyPath: m_Layer
-      value: 12
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1496655492045340, guid: 9cea2ff4a69a2044a8561d5b700c7ca8, type: 2}
       propertyPath: m_Layer
@@ -839,7 +883,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1529324356465378, guid: 9cea2ff4a69a2044a8561d5b700c7ca8, type: 2}
       propertyPath: m_Layer
-      value: 12
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1622231999013022, guid: 9cea2ff4a69a2044a8561d5b700c7ca8, type: 2}
       propertyPath: m_Layer
@@ -972,6 +1016,7 @@ GameObject:
   - component: {fileID: 1621330923}
   - component: {fileID: 1621330922}
   - component: {fileID: 1621330921}
+  - component: {fileID: 1621330925}
   m_Layer: 12
   m_Name: Test planet (2)
   m_TagString: Untagged
@@ -1068,6 +1113,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1621330925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1621330920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02a94ec750a7e794281bf5c3f4201da1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlanetGravity: {fileID: 869935919}
+  PlanetSize: {fileID: 832256742}
 --- !u!1 &1633271166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1079,7 +1137,7 @@ GameObject:
   - component: {fileID: 1633271167}
   - component: {fileID: 1633271169}
   - component: {fileID: 1633271168}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: SizeObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1169,74 +1227,6 @@ Prefab:
     - target: {fileID: 1878310434829218, guid: 9cea2ff4a69a2044a8561d5b700c7ca8, type: 2}
       propertyPath: m_Name
       value: Test planet (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: ShrinkCollider
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_DistanceScale
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_ForceMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_ForceMagnitude
-      value: -10000
-      objectReference: {fileID: 0}
-    - target: {fileID: 1812582872968980, guid: 9cea2ff4a69a2044a8561d5b700c7ca8, type: 2}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1223858183823198, guid: 9cea2ff4a69a2044a8561d5b700c7ca8, type: 2}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1496655492045340, guid: 9cea2ff4a69a2044a8561d5b700c7ca8, type: 2}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275797813410674, guid: 9cea2ff4a69a2044a8561d5b700c7ca8, type: 2}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1878310434829218, guid: 9cea2ff4a69a2044a8561d5b700c7ca8, type: 2}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1529324356465378, guid: 9cea2ff4a69a2044a8561d5b700c7ca8, type: 2}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1392397142636688, guid: 9cea2ff4a69a2044a8561d5b700c7ca8, type: 2}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1622231999013022, guid: 9cea2ff4a69a2044a8561d5b700c7ca8, type: 2}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 250511472676345072, guid: 9cea2ff4a69a2044a8561d5b700c7ca8,
-        type: 2}
-      propertyPath: m_ForceMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 250511472676345072, guid: 9cea2ff4a69a2044a8561d5b700c7ca8,
-        type: 2}
-      propertyPath: m_DistanceScale
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 250511472676345072, guid: 9cea2ff4a69a2044a8561d5b700c7ca8,
-        type: 2}
-      propertyPath: m_ForceMagnitude
-      value: -10000
-      objectReference: {fileID: 0}
-    - target: {fileID: 212090173095623916, guid: 9cea2ff4a69a2044a8561d5b700c7ca8,
-        type: 2}
-      propertyPath: m_SortingOrder
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9cea2ff4a69a2044a8561d5b700c7ca8, type: 2}
