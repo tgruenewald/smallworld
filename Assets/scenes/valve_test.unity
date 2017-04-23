@@ -1047,6 +1047,7 @@ GameObject:
   - component: {fileID: 1046175842}
   - component: {fileID: 1046175843}
   - component: {fileID: 1046175844}
+  - component: {fileID: 1046175845}
   m_Layer: 0
   m_Name: valve
   m_TagString: Untagged
@@ -1116,8 +1117,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a12af5fca30784796c013652f416db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  isOpen: 0
 --- !u!58 &1046175843
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1132,7 +1131,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.825
+  m_Radius: 1.3972158
 --- !u!114 &1046175844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1145,7 +1144,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853447f492833ef419c34783a7bd04c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  isOpen: 0
+--- !u!95 &1046175845
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 95422790987508238, guid: e09a253d7deac55499ae7ee9a3ee0b42,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1046175839}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ef38ebbac6394b947a81b69227e45483, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &1104739507
 Prefab:
   m_ObjectHideFlags: 0
