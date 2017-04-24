@@ -1,26 +1,30 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Valve : MonoBehaviour {
 	public bool isOpen = false; // hi
-
+	public bool firstTime = true;
 	// Use this for initialization
 	void Start () {
-		string id = gameObject.scene.name + gameObject.name;
-		Debug.Log ("Valve:  " + id);
-		if (GameState.gameDict.ContainsKey (id)) {
-			Debug.Log ("=======Valve restoring gamestate");
-			isOpen = GameState.gameDict [id].isOpen;
-			perform_valve_action ();
-		} else {
-			Debug.Log ("Valve adding gamestate");
-			GameState.gameDict.Add (id, this);
-		}
+
 	}
 
 	// Update is called once per frame
 	void Update () {
+		if (firstTime) {
+			firstTime = false;
+			string id = gameObject.scene.name + gameObject.name;
+			Debug.Log ("Valve:  " + id);
+			if (GameState.gameDict.ContainsKey (id)) {
+				Debug.Log ("=======Valve restoring gamestate");
+				isOpen = GameState.gameDict [id].isOpen;
+				perform_valve_action ();
+			} else {
+				Debug.Log ("Valve adding gamestate");
+				GameState.gameDict.Add (id, this);
+			}
+		}
 
 	}
 
