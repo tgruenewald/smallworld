@@ -6,9 +6,15 @@ public class Tendril : MonoBehaviour {
 
 	public GameObject valve;
 	bool hasExited = true;
+	public Sprite highlight;
+	Sprite old;
+	float timeStamp = 0.0f;
+	float coolDownPeriodInSeconds = 1.0f;
 	// Use this for initialization
 	void Start () {
-		
+//		hi = Resources.Load<Sprite>("valve_blue/tendril_blue_highlight");
+		old = GetComponent<SpriteRenderer>().sprite;
+		timeStamp = Time.time + coolDownPeriodInSeconds;
 	}
 	
 	// Update is called once per frame
@@ -18,9 +24,12 @@ public class Tendril : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col){
 		Debug.Log("entered");
 		
-		if (hasExited) {
-			Animator animator = gameObject.GetComponent<Animator> ();
-			animator.SetBool("play", true);
+		if (hasExited && timeStamp <= Time.time) {
+			timeStamp = Time.time + coolDownPeriodInSeconds;
+			//Animation animation = gameObject.GetComponent<Animation> ();
+			//animator.SetBool("play", true);
+			//animation.Play();
+			GetComponent<SpriteRenderer> ().sprite = highlight;
 			valve.GetComponent<Valve> ().activate ();			
 			hasExited = false;
 		}
@@ -29,8 +38,11 @@ public class Tendril : MonoBehaviour {
 	
 	void OnTriggerExit2D(Collider2D col){
 		Debug.Log("exited");
-		Animator animator = gameObject.GetComponent<Animator> ();
-		animator.SetBool("play", false);		
+		GetComponent<SpriteRenderer> ().sprite = old;
+//		Behaviour halo = (Behaviour) gameObject.GetComponent("Halo");
+//		halo.enabled = false;
+//		Animator animator = gameObject.GetComponent<Animator> ();
+//		animator.SetBool("play", false);		
 		hasExited = true;
 	}	
 }
