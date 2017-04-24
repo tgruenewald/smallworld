@@ -23,6 +23,11 @@ public class Player : MonoBehaviour
     private PointEffector2D gravityEffector;
     private float initialGravityForce;
 
+    private GameObject spawnPoint;
+    private Vector3 startingPosition;
+
+    public string NextTargetSpawnPoint { get; set; }
+
     // Use this for initialization
     void Start ()
     {
@@ -138,4 +143,41 @@ public class Player : MonoBehaviour
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
+
+    public void SpawnAt(GameObject spawnPoint)
+    {
+        Camera.main.GetComponent<SmoothCamera>().target = gameObject;
+        transform.position = spawnPoint.transform.position;
+        this.spawnPoint = spawnPoint;
+        this.startingPosition = spawnPoint.transform.position;
+    }
+
+    public void Respawn()
+    {
+        if (spawnPoint == null)
+        {
+            var spawnPointScript = GameObject.FindObjectOfType<SpawnPoint>();
+            if (spawnPoint == null)
+            {
+                Debug.Log("Unable to find spawn point in level!  Picking arbitrary place.");
+                var crystals = GameObject.FindObjectsOfType<crystal>();
+                if (crystals.Length > 0)
+                {
+                    spawnPoint = crystals[0].gameObject;
+                }
+                else
+                {
+                    //well, we're screwed.
+                }
+            }
+            else
+            {
+                spawnPoint = spawnPointScript.gameObject;
+            }
+        }
+
+        this.transform.position = (spawnPoint == null) ? startingPosition : spawnPoint.transform.position;
+        //if (OnPlayerSpawned != null)
+        //    OnPlayerSpawned();
+    }
 }
