@@ -25,4 +25,8 @@ public class HudDisplay : MonoBehaviour {
 			head.GetComponent<Image> ().enabled = true;
 		}
 	}
+
+	public void click() {
+		Debug.Log ("========================CLICKED BUTTON======================");
+	}
 }

@@ -11,5 +11,6 @@ public class RestartLevelButtonState : ButtonState {
 		//	return;
 
 		//SwitchLevel.SwitchToLevel(playerDroplet.gameObject, SceneManager.GetActiveScene().name);
+		Debug.Log ("========================CLICKED BUTTON======================");
     }
 }
