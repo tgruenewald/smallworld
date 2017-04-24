@@ -1,0 +1,14 @@
+{
+	"Name": "tutorialsizemessage",
+	"Sections": 
+	[
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "If I were smaller, I could fit through these gaps."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Or, if the whole planet were larger ..."
+		}
+	]
+}

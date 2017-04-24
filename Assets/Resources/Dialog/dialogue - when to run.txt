@@ -17,6 +17,12 @@ randomtendril: after touching a random tendril in the 2nd level? (optional, only
 
 tutorial: appears at very beginning of game
 
+tutorialsizemessage: 
+if lvl 1 planet is less than size 6, appears in front of first door, by the small gaps
+or
+if lvl 2 planet is less than size 6, appears at the bottom of the fall, on the left
+
+
 valveopen_1sttime: after touching tendril for first time
 valveclose_1sttime: after touching tendril again, closing valve, for the first time
 valveopen_default: whenever opening (if this gets repetitive, only in the 1st level)
