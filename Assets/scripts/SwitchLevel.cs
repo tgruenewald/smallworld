@@ -12,18 +12,27 @@ public class SwitchLevel : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D coll)
 	{
+		Debug.Log ("ENTERING PLANET!!!!!!");
 		if (SwitchOnClick)
 			return;
 
         UpdateNextDungeonSize();
-        SwitchLevel.SwitchToLevel(coll.gameObject, LevelToSwitchTo, SpawnPointToSpawnAt);
+		SwitchLevel.SwitchToLevel(coll.gameObject, LevelToSwitchTo, SpawnPointToSpawnAt, this.GetComponentInParent<Planet>());
 	}
 
-	public static void SwitchToLevel(GameObject playerObject, string level, string spawnPointToSpawnAt)
+	public static void SwitchToLevel(GameObject playerObject, string level, string spawnPointToSpawnAt, Planet planet)
 	{
 		GameState.SetPlayer(playerObject);
+		Debug.Log ("savign planet state");
+		GameState.planet1 = GameObject.Find("planet1").GetComponent<Planet>().PlanetSizeManager.SizeTransform.localScale;
+		GameState.planet2 = GameObject.Find("planet2").GetComponent<Planet>().PlanetSizeManager.SizeTransform.localScale;
+		GameState.planet3 = GameObject.Find("planet3").GetComponent<Planet>().PlanetSizeManager.SizeTransform.localScale;
+
+
         GameState.GetPlayer().NextTargetSpawnPoint = spawnPointToSpawnAt;
+		playerObject.GetComponent<Rigidbody2D> ().bodyType = RigidbodyType2D.Static;
         //GameState.GetPlayer().StopAllAudio();
+		Debug.Log("Scene: " + level);
         SceneManager.LoadScene(level);
 	}
 
@@ -32,7 +41,7 @@ public class SwitchLevel : MonoBehaviour {
 		if (Input.GetMouseButtonDown(0) && SwitchOnClick)
 		{
             UpdateNextDungeonSize();
-            SwitchLevel.SwitchToLevel(GameState.GetPlayer().gameObject, LevelToSwitchTo, SpawnPointToSpawnAt);
+			SwitchLevel.SwitchToLevel(GameState.GetPlayer().gameObject, LevelToSwitchTo, SpawnPointToSpawnAt, this.GetComponentInParent<Planet>());
 			//SceneManager.LoadScene(LevelToSwitchTo);    
 		}
 	}

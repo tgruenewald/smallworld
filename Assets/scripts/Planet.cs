@@ -20,6 +20,7 @@ public class Planet : MonoBehaviour
     {
         PlanetGravity = GetComponentInChildren<PlanetGravity>();
         PlanetSizeManager = GetComponentInChildren<PlanetSizeManager>();
+
     }
     
     // Update is called once per frame
