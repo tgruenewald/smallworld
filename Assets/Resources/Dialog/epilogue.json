@@ -4,15 +4,19 @@
 	[
 		{
 			"Icon": "Sprites/characterhead",
+			"SectionText": "Captain's Journal, Entry 16: 4.6.3023"
+		},
+		{
+			"Icon": "Sprites/characterhead",
 			"SectionText": "With my assistance, Zarcon applied for and easily received recognition as sentient life."
 		},
 		{
 			"Icon": "Sprites/characterhead",
-			"SectionText": "Zarcon also acquired sovereignty of the planets rather quickly.."
+			"SectionText": "Zarcon also acquired sovereignty of the planets rather quickly."
 		},
 		{
 			"Icon": "Sprites/characterhead",
-			"SectionText": "Holding the entire Terracom robot fleet at hostage helped fasttrack the application."
+			"SectionText": "Holding the entire Terracom robot fleet hostage helped fast-track the application."
 		},
 		{
 			"Icon": "Sprites/characterhead",
@@ -20,7 +24,7 @@
 		},
 		{
 			"Icon": "Sprites/characterhead",
-			"SectionText": "Especially these hot springs."
+			"SectionText": "These hot springs are a lot more enjoyable when Zarcon doesn't let make them shrink."
 		},
 		{
 			"Icon": "Sprites/characterhead",
