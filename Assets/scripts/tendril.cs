@@ -5,6 +5,7 @@ using UnityEngine;
 public class Tendril : MonoBehaviour {
 
 	public GameObject valve;
+	bool hasExited = true;
 	// Use this for initialization
 	void Start () {
 		
