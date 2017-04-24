@@ -1,0 +1,18 @@
+{
+	"Name": "alienpickup2",
+	"Sections": 
+	[
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Another one of those weird specimens."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Last time I ripped one of these out of the ground, the shrinking stopped."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Let's go see if the same thing happened again."
+		}
+	]
+}

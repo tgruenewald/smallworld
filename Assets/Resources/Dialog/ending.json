@@ -1,0 +1,62 @@
+{
+	"Name": "ending",
+	"Sections": 
+	[
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "You shrank all the robots! They're so small, it'll take a million years for them to finish terraforming."
+		},
+		{
+			"Icon": "Sprites/zarcon",
+			"SectionText": "Your weapon system made it easier to project my shrinking powers."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "It took me seven years to learn the engineering of how this system works."
+		},
+		{
+			"Icon": "Sprites/zarcon",
+			"SectionText": "And one year to forget it."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Zarcon, you will be a formidable addition to intergalactic politics."
+		},
+		{
+			"Icon": "Sprites/zarcon",
+			"SectionText": "Thanks for the help."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Eh, I'm glad to see the planets restored to life."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Plus, I still get a holiday bonus for the discovery, even if Terracom eats a net loss."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "And I get to have all these planets named after me - I mean, my favorite character."
+		},
+		{
+			"Icon": "Sprites/zarcon",
+			"SectionText": "These planets are already named. We are the Planets of Zarcon."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Right. You were here first. But maybe just one planet?"
+		},
+		{
+			"Icon": "Sprites/zarcon",
+			"SectionText": "No."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Just informally?"
+		},
+		{
+			"Icon": "Sprites/zarcon",
+			"SectionText": "No."
+		}
+	]
+}

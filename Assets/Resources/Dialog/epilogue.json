@@ -1,0 +1,34 @@
+{
+	"Name": "epilogue",
+	"Sections": 
+	[
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "With my assistance, Zarcon applied for and easily received recognition as sentient life."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Zarcon also acquired sovereignty of the planets rather quickly.."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Holding the entire Terracom robot fleet at hostage helped fasttrack the application."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Now I'm enjoying my holiday vacation exploring the hot springs of Zarcon."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Though I've got another name for these hot springs in my head."
+		},
+		{
+			"Icon": "Sprites/zarcon",
+			"SectionText": "I heard that thought!"
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "They're called ..."
+		}
+	]
+}
