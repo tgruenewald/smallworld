@@ -34,4 +34,4 @@ white text on black screen: Five minutes later ...
 fade into outerspace/planets are all green and healthy again
 run ending
 fade to black
-run ending on black screen
+run epilogue on black screen
