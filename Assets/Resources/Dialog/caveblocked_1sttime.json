@@ -1,0 +1,14 @@
+{
+	"Name": "caveblocked_1sttime",
+	"Sections": 
+	[
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "This cave is blocked. Like my arteries after a quad helping of Terracom Fries."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Not that I would ever have a quad helping."
+		}
+	]
+}

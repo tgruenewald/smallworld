@@ -1,0 +1,14 @@
+{
+	"Name": "alienpickup3",
+	"Sections": 
+	[
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Yes! Got the third bit. It's like a weird head ..."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Back to the surface for my holiday bonus!"
+		}
+	]
+}

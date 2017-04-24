@@ -9,20 +9,19 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1793781752753038}
+  m_RootGameObject: {fileID: 1926848617175304}
   m_IsPrefabParent: 1
---- !u!1 &1793781752753038
+--- !u!1 &1926848617175304
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4000585324055256}
-  - component: {fileID: 212768385151925590}
-  - component: {fileID: 61195152569475942}
-  - component: {fileID: 114382357725569862}
-  - component: {fileID: 95984741180440612}
+  - component: {fileID: 4023718610622678}
+  - component: {fileID: 212088534734252376}
+  - component: {fileID: 61859394963533424}
+  - component: {fileID: 114254087417968466}
   m_Layer: 0
   m_Name: tendril_black
   m_TagString: Untagged
@@ -30,25 +29,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4000585324055256
+--- !u!4 &4023718610622678
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1793781752753038}
+  m_GameObject: {fileID: 1926848617175304}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.3, y: -16.163597, z: 0}
+  m_LocalPosition: {x: -16.43, y: -16.173864, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61195152569475942
+--- !u!61 &61859394963533424
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1793781752753038}
+  m_GameObject: {fileID: 1926848617175304}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -57,41 +56,25 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1.25, y: 2.17}
---- !u!95 &95984741180440612
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1793781752753038}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 73ff4f4590a8ffb4b88841db35535a42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114382357725569862
+--- !u!114 &114254087417968466
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1793781752753038}
+  m_GameObject: {fileID: 1926848617175304}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 098de8cadb0714d4c96f5e84898b6367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   valve: {fileID: 0}
---- !u!212 &212768385151925590
+  highlight: {fileID: 21300000, guid: 51ff40363640c9a418f58f2a58baff4e, type: 3}
+--- !u!212 &212088534734252376
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1793781752753038}
+  m_GameObject: {fileID: 1926848617175304}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0

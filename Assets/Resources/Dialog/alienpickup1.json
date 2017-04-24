@@ -1,0 +1,26 @@
+{
+	"Name": "alienpickup1",
+	"Sections": 
+	[
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "This looks like an interesting specimen."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "I better take it."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "For science."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "..."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Now I'm craving cake."
+		}
+	]
+}

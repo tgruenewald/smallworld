@@ -1,0 +1,46 @@
+{
+	"Name": "epilogue",
+	"Sections": 
+	[
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Captain's Journal, Entry 16: 4.6.3023"
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "With my assistance, Zarcon applied for and easily received recognition as sentient life."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Zarcon also acquired sovereignty of the planets rather quickly."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Holding the entire Terracom robot fleet hostage helped fast-track the application."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Now I'm enjoying my holiday vacation exploring these planets."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "These hot springs are a lot more enjoyable when Zarcon doesn't let make them shrink."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "I'm thinking of starting a resort when things settle down."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "I know just what to name the resort too."
+		},
+		{
+			"Icon": "Sprites/zarcon",
+			"SectionText": "I heard that thought!"
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "It'll be called ..."
+		}
+	]
+}

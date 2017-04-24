@@ -1,0 +1,10 @@
+{
+	"Name": "valveopen_1sttime",
+	"Sections": 
+	[
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "These tendrils are squishy. I think I heard something open."
+		}
+	]
+}

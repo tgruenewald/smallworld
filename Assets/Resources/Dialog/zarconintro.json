@@ -1,0 +1,78 @@
+{
+	"Name": "zarconintro",
+	"Sections": 
+	[
+		{
+			"Icon": "Sprites/zarcon",
+			"SectionText": "I am Zarcon!"
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Gah! I mean ... greetings, Zarcon. I didn't realize I was holding you."
+		},
+		{
+			"Icon": "Sprites/zarcon",
+			"SectionText": "I only just learned how to speak into your mind. It's easier now that you've assembled my three parts."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "You're welcome!"
+		},
+		{
+			"Icon": "Sprites/zarcon",
+			"SectionText": "No,  you've done a terrible thing. Look around you. What do you see?"
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "I see you. Also, my helmet."
+		},
+		{
+			"Icon": "Sprites/zarcon",
+			"SectionText": "... yes. But you also see dead planets. You caused this."
+		},
+		{
+			"Icon": "Sprites/zarcon",
+			"SectionText": "My life energy supported all of these ecosystems. You removed me and broke the chain."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "At least I got rid of your shrinking problem."
+		},
+		{
+			"Icon": "Sprites/zarcon",
+			"SectionText": "We like shrinking on these planets. We got along fine shrinking before you came. Put me back."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Sure. Except there's an army of automated terraforming robots about five minutes away."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Now that the planets are stable, they want to move in. Like new neighbors."
+		},
+		{
+			"Icon": "Sprites/zarcon",
+			"SectionText": "New neighbors that want to kill me."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "You catch on pretty quick."
+		},
+		{
+			"Icon": "Sprites/zarcon",
+			"SectionText": "Telepathy has its perks."
+		},
+		{
+			"Icon": "Sprites/zarcon",
+			"SectionText": "Telepathy allows me, for instance, to know that your ship has weapons."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "For self-defense only!"
+		},
+		{
+			"Icon": "Sprites/zarcon",
+			"SectionText": "That's exactly how I plan to use them."
+		}
+	]
+}

@@ -4,31 +4,43 @@
 	[
 		{
 			"Icon": "Sprites/characterhead",
-			"SectionText": "Who left my trusty crossbow lying on the ground?"
+			"SectionText": "Captain's Journal, Entry 1: 3.3.3023"
 		},
 		{
 			"Icon": "Sprites/characterhead",
-			"SectionText": "Wait, I did."
+			"SectionText": "I, Captain Sam, have started a journal to record my humble exploration of three tiny, uncharted planets."
 		},
 		{
 			"Icon": "Sprites/characterhead",
-			"SectionText": "I'll stash this in my pack in case I need it."
-		},
-		{
-			"Icon": "",
-			"SectionText": "The crossbow has been added to your backpack on the right. To use an item during combat, click on the item."
-		},
-		{
-			"Icon": "",
-			"SectionText": "To use an item outside of combat, also click on the item. After you use item out of combat, it's gone forever."
-		},
-		{
-			"Icon": "",
-			"SectionText": "This is a great way to clear up space in your pack."
+			"SectionText": "I will be the first human to set foot on these planets - though not the first living creature, judging by the green."
 		},
 		{
 			"Icon": "Sprites/characterhead",
-			"SectionText": "It's also a great way to lose weight!"
+			"SectionText": "Once I confirm these planets are suitable for human settlement, I will be named Terracom Employee of the Month, guaranteed!"
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "I just have to make sure of this before I beam this discovery to HQ."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "I can smell that holiday bonus coming from parsecs away."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Smells like mint."
+		},
+		{
+			"Icon": "",
+			"SectionText": "..."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "I like mint."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "It's a great way to fresh up the recycled oxygen in my helmet."
 		}
 	]
 }

@@ -1,0 +1,14 @@
+{
+	"Name": "clearing1stplanet",
+	"Sections": 
+	[
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Victory! The shrinking stopped!"
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Strange, I don't remember the planet being this lifeless. At least the atmosphere is still intact?"
+		}
+	]
+}

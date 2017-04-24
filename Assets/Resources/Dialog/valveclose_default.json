@@ -1,0 +1,10 @@
+{
+	"Name": "valveclose_default",
+	"Sections": 
+	[
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Something closed."
+		}
+	]
+}

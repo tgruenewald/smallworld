@@ -1,0 +1,43 @@
+alienpickup1: after picking up first alien part
+alienpickup2: after picking up second alien part
+alienpickup3: after picking up third alien part
+
+caveblocked_default: default message when accessing cave that is still unavailable
+caveblocked_firsttime: first time when trying to access any cave that is unavailable (only appears once)
+
+clearing1stplanet: after RETURNING TO SURFACE after picking up first alien part
+clearing2ndplanet: after RETURNING TO SURFACE after picking up second alien part
+clearing3rdplanet: after RETURNING TO SURFACE after picking up third alien part
+
+death: when flying out-of-bounds in space
+
+entercave1sttime: after entering the first cave for the first time
+
+randomtendril: after touching a random tendril in the 2nd level? (optional, only appears once)
+
+tutorial: appears at very beginning of game
+
+tutorialsizemessage: 
+if lvl 1 planet is less than size 6, appears in front of first door, by the small gaps
+or
+if lvl 2 planet is less than size 6, appears at the bottom of the fall, on the left
+
+
+valveopen_1sttime: after touching tendril for first time
+valveclose_1sttime: after touching tendril again, closing valve, for the first time
+valveopen_default: whenever opening (if this gets repetitive, only in the 1st level)
+valveclose_default: whenever closing valve (or if this gets repetitive, only in the 1st level)
+//another possibility for providing user feedback that a valve was activated could be different sound effects for opening and closing
+
+ENDING SEQUENCE:
+after clearing3rdplanet runs
+fade to black
+white text on black screen: The specimens you collected fuse together into a single creature ... 
+beneath this text on the same screen, display a large image of Zarcon
+run zarconintro
+fade to black
+white text on black screen: Five minutes later ...
+fade into outerspace/planets are all green and healthy again
+run ending
+fade to black
+run epilogue on black screen

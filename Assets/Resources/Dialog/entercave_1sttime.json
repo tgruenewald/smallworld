@@ -1,0 +1,30 @@
+{
+	"Name": "entercave_1sttime",
+	"Sections": 
+	[
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Disaster! These planets shrink as soon as they're stepped on!"
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "This will make settlement impossible."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "It's like this world hates my boots."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Or the world just hates me."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "At least the shrinking stops while I'm in here."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "I better search further. Maybe I'll still find something worth discovering."
+		}
+	]
+}

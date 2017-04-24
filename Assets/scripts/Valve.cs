@@ -16,18 +16,19 @@ public class Valve : MonoBehaviour {
 	}
 
 	public void activate() {
+		Debug.Log ("VALVE IS ACTIVE");
 		isOpen = !isOpen;
 		SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer> ();
 		Collider2D cir = gameObject.GetComponent<CapsuleCollider2D> ();
 		Animator animator = gameObject.GetComponent<Animator> ();
 		if (isOpen) {
-			sr.sprite = Resources.Load<Sprite> ("valve/open_valve");
 			cir.enabled = false;
 			animator.SetBool ("isOpen", true);
+			Debug.Log ("opening.....");
 		} else {
-			sr.sprite = Resources.Load<Sprite> ("valve/close_valve");			
 			cir.enabled = true;
 			animator.SetBool ("isOpen", false);
+			Debug.Log ("closeing.....");
 		}
 	}
 

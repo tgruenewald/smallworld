@@ -1,0 +1,22 @@
+{
+	"Name": "clearing2ndplanet",
+	"Sections": 
+	[
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Excellent, this planet is stable now too."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Also, a bit faded."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "The company terraforming robots will fix this."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "I just have to stabilize one more planet."
+		}
+	]
+}
