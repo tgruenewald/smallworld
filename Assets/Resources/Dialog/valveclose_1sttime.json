@@ -1,0 +1,10 @@
+{
+	"Name": "valveclose1sttime",
+	"Sections": 
+	[
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Sounds like something closed."
+		}
+	]
+}

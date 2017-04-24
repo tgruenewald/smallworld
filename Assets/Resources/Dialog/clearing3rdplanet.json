@@ -1,0 +1,34 @@
+{
+	"Name": "clearing3rdplanet",
+	"Sections": 
+	[
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "HQ, this is Captain Sam reporting."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "You can send the terraforming robot fleet now."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "I've stabilized three planets. That's right - three!"
+		},
+		{
+			"Icon": "Sprites/computer",
+			"SectionText": "ACKNOWLEDGED. TERRAFORMING FLEET DISPATCHED. ETA: 5 MINUTES"
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Great. The real estate market in this galaxy is about to get interesting -"
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "Wait, something's happening to the specimens I collected."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "They're ... melding together. I'll call you back."
+		}
+	]
+}

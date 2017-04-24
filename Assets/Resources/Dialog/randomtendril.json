@@ -1,0 +1,14 @@
+{
+	"Name": "randomtendril",
+	"Sections": 
+	[
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "I'll never get used to how squishy these feel."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "And I'm wearing gloves."
+		}
+	]
+}
