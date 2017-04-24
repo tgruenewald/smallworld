@@ -16,11 +16,19 @@
 		},
 		{
 			"Icon": "Sprites/characterhead",
-			"SectionText": "Now I'm enjoying my holiday vacation exploring the hot springs of Zarcon."
+			"SectionText": "Now I'm enjoying my holiday vacation exploring these planets."
 		},
 		{
 			"Icon": "Sprites/characterhead",
-			"SectionText": "Though I've got another name for these hot springs in my head."
+			"SectionText": "Especially these hot springs."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "I'm thinking of starting a resort when things settle down."
+		},
+		{
+			"Icon": "Sprites/characterhead",
+			"SectionText": "I know just what to name the resort too."
 		},
 		{
 			"Icon": "Sprites/zarcon",
@@ -28,7 +36,7 @@
 		},
 		{
 			"Icon": "Sprites/characterhead",
-			"SectionText": "They're called ..."
+			"SectionText": "It'll be called ..."
 		}
 	]
 }
