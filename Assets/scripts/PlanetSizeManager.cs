@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlanetSize : MonoBehaviour
+public class PlanetSizeManager : MonoBehaviour
 {
     private static float growsp = .0025f;
     private static float grvgrow = 10f;
@@ -14,7 +14,7 @@ public class PlanetSize : MonoBehaviour
     public float ScalePercentage { get { return scalePercentage; } }
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         //SizeTransform = GetComponentInParent<Transform>();
         SizeTransform = this.transform.parent.gameObject.transform;
@@ -37,7 +37,7 @@ public class PlanetSize : MonoBehaviour
     }
 
     // Update is called once per frame
-    void LateUpdate ()
+    void LateUpdate()
     {
         if (shouldShrink)
         {
