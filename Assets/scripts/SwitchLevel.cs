@@ -24,18 +24,10 @@ public class SwitchLevel : MonoBehaviour {
 	{
 		GameState.SetPlayer(playerObject);
 		Debug.Log ("savign planet state");
-		GameState.planet1 = GameObject.Find("planet1").GetComponent<Planet>();
-		GameState.planet2 = GameObject.Find("planet2").GetComponent<Planet>();
-		GameState.planet3 = GameObject.Find("planet3").GetComponent<Planet>();
-		if (GameState.planet1 == null) {
-			Debug.Log ("planet1 was null anyway :(");
-		}
-		if (GameState.planet2 == null) {
-			Debug.Log ("planet2 was null anyway :(");
-		}
-		if (GameState.planet3 == null) {
-			Debug.Log ("planet3 was null anyway :(");
-		}
+		GameState.planet1 = GameObject.Find("planet1").GetComponent<Planet>().PlanetSizeManager.SizeTransform.localScale;
+		GameState.planet2 = GameObject.Find("planet2").GetComponent<Planet>().PlanetSizeManager.SizeTransform.localScale;
+		GameState.planet3 = GameObject.Find("planet3").GetComponent<Planet>().PlanetSizeManager.SizeTransform.localScale;
+
 
         GameState.GetPlayer().NextTargetSpawnPoint = spawnPointToSpawnAt;
 		playerObject.GetComponent<Rigidbody2D> ().bodyType = RigidbodyType2D.Static;

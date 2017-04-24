@@ -8,9 +8,10 @@ public static class GameState
     private static GameObject player = null;
     public static GameObject introMusic = null;
 	private static Transform planetSize = null;
-	public static Planet planet1 = null;
-	public static Planet planet2 = null;
-	public static Planet planet3 = null;
+	public static Vector3 planet1;
+	public static Vector3 planet2;
+	public static Vector3 planet3;
+
 
 
 	public static void SetPlayer(GameObject player){

@@ -11,18 +11,29 @@ public class SpawnPoint : MonoBehaviour {
 		var player = GameState.GetPlayer();
 		player.GetComponent<Rigidbody2D> ().bodyType = RigidbodyType2D.Dynamic;
 		Debug.Log ("Restorign planet state");
-		if (GameState.planet1 != null) {
-			Debug.Log ("==========================resettting planet1");
-			GameObject.Find ("planet1").GetComponent<Planet> ().PlanetSizeManager = GameState.planet1.PlanetSizeManager;
+		if (GameObject.Find ("planet1").GetComponent<Planet> () != null) {
+			try {
+			GameObject.Find ("planet1").GetComponent<Planet> ().PlanetSizeManager.SizeTransform.localScale = GameState.planet1;
+			} catch {
+				Debug.Log ("planet 1 not saved");
+			}
 		}
-		if (GameState.planet2 != null) {
-			Debug.Log ("(\"==========================resettting planet2");
-			GameObject.Find ("planet2").GetComponent<Planet> ().PlanetSizeManager = GameState.planet2.PlanetSizeManager;
+		if (GameObject.Find ("planet2").GetComponent<Planet> () != null) {
+			try {
+			GameObject.Find ("planet2").GetComponent<Planet> ().PlanetSizeManager.SizeTransform.localScale = GameState.planet2;
+			} catch {
+				Debug.Log ("planet 2 not saved");
+			}
+
 		}
-		if (GameState.planet3 != null) {
-			Debug.Log ("(\"==========================resettting planet3");
-			GameObject.Find ("planet3").GetComponent<Planet> ().PlanetSizeManager = GameState.planet3.PlanetSizeManager;
+		if (GameObject.Find ("planet3").GetComponent<Planet> () != null) {
+			try {
+			GameObject.Find ("planet3").GetComponent<Planet> ().PlanetSizeManager.SizeTransform.localScale = GameState.planet3;
+			} catch {
+				Debug.Log ("planet 3 not saved");
+			}
 		}
+		Debug.Log ("TRIED TO SAVE PLANET SIZE");
 
 		if (player != null)
 		{
