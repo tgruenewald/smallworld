@@ -8,25 +8,28 @@ public class Dungeon : MonoBehaviour
 	void Start ()
     {
         var player = GameState.GetPlayer();
+		GameObject cachePlayer = GameObject.Find ("CachedPlayer");
+		player.SpawnAt (cachePlayer);
         Vector3 scale = GetDesiredDungeonSize(SwitchLevel.NextDungeonSize);
-        GameObject[] gameObjs = FindObjectsOfType<GameObject>();
-        GameObject emptyParent = new GameObject("RootParent");
-        foreach(var gameObj in gameObjs)
-        {
-            //Make sure the gameObj is the root of that particular heirarchy
-            if (gameObj.transform.root.gameObject != gameObj || (player != null && gameObj == player.gameObject))
-                continue;
+//        GameObject[] gameObjs = FindObjectsOType<GameObject>();
+//        GameObject emptyParent = new GameObject("RootParent");
+//        foreach(var gameObj in gameObjs)
+//        {
+//            //Make sure the gameObj is the root of that particular heirarchy
+//            if (gameObj.transform.root.gameObject != gameObj || (player != null && gameObj == player.gameObject))
+//                continue;
+//
+//            gameObj.transform.parent = emptyParent.transform;
+//        }
+		GameObject planetParent = GameObject.FindGameObjectWithTag("PlanetInterior");
 
-            gameObj.transform.parent = emptyParent.transform;
-        }
-
-        emptyParent.transform.localScale = scale;
-        Camera.main.orthographicSize *= GetDesiredDungeonScaleFloat(SwitchLevel.NextDungeonSize);
+		planetParent.transform.localScale = scale;
+        //Camera.main.orthographicSize *= GetDesiredDungeonScaleFloat(SwitchLevel.NextDungeonSize);
 
         //player.gameObject.transform.localScale = scale;
-        player.transform.up = Vector3.up;
-        player.GetComponent<Rigidbody2D>().freezeRotation = true;
-        player.Respawn();
+//        player.transform.up = Vector3.up;
+//        player.GetComponent<Rigidbody2D>().freezeRotation = true;
+//        player.Respawn();
     }
 	
 	// Update is called once per frame
@@ -38,6 +41,7 @@ public class Dungeon : MonoBehaviour
     private float GetDesiredDungeonScaleFloat(Planet.PlanetSizeEnum parentPlanetSize)
     {
         float factor = 1.0f;
+		Debug.Log ("Planet size = " + parentPlanetSize);
         switch (parentPlanetSize)
         {
             case Planet.PlanetSizeEnum.L:

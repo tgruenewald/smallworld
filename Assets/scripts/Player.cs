@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -20,17 +21,22 @@ public class Player : MonoBehaviour
     public GameObject CurrentPlanet { get { return currentPlanet; } }
     private GameObject currentPlanet;
 
-    private PointEffector2D gravityEffector;
-    private float initialGravityForce;
+    public PointEffector2D gravityEffector;
+	public float initialGravityForce;
+	public float WHAT_IS_GRAVITY_X;
+	public float WHAT_IS_GRAVITY_Y;
 
     private GameObject spawnPoint;
     private Vector3 startingPosition;
 
     public string NextTargetSpawnPoint { get; set; }
+	GameObject planetSizeDisplay;
 
     // Use this for initialization
     void Start ()
     {
+		planetSizeDisplay = GameObject.Find ("PlanetSize");
+		planetSizeDisplay.GetComponent<Text> ().text = "SIZE";
 		GroundCheck = GetComponent<CircleCollider2D>();
         Camera.main.GetComponent<SmoothCamera>().target = gameObject;
 		animator = GetComponent<Animator>();
@@ -42,28 +48,40 @@ public class Player : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
+	void updatePlanetSize() {
+		if (planetSizeDisplay == null) {
+			planetSizeDisplay = GameObject.Find ("PlanetSize");
+		}
+		if (planetSizeDisplay != null) {
+			planetSizeDisplay.GetComponent<Text> ().text = currentPlanet.GetComponentInParent<Planet> ().getPlanetSizeText ();
+		}
+
+	}
+
     // Update is called once per frame
     void Update ()
     {
         PerformGroundCheck();
 		DEBUG_GROUNDED = IsGrounded;
+		WHAT_IS_GRAVITY_X = Physics2D.gravity.x;
+		WHAT_IS_GRAVITY_Y = Physics2D.gravity.y;
 		animator.SetBool("isWalking", false);
-        if (currentPlanet != null)
-        {
-            this.transform.up = -(currentPlanet.transform.position - this.transform.position);
-            PlanetGravity currentPlanetGravity = currentPlanet.GetComponentInChildren<PlanetGravity>();
-            if (currentPlanetGravity != null)
-            {
-                this.gravityEffector.forceMagnitude = initialGravityForce * currentPlanetGravity.ForceScale;
-            }
+		if (currentPlanet != null) {
+			updatePlanetSize ();
+			this.transform.up = -(currentPlanet.transform.position - this.transform.position);
+			PlanetGravity currentPlanetGravity = currentPlanet.GetComponentInChildren<PlanetGravity> ();
+			if (currentPlanetGravity != null) {
+				this.gravityEffector.forceMagnitude = initialGravityForce * currentPlanetGravity.ForceScale;
+			}
 
-            //Vector3 directionToCurrentPlanetCenter = currentPlanet.transform.position - this.transform.position;
-            //Quaternion lookAtQuat = Quaternion.LookRotation(directionToCurrentPlanetCenter);
-            ////this.transform.eulerAngles = new Vector3(this.transform.eulerAngles.x, this)
-            //this.transform.rotation = new Quaternion(this.transform.rotation.x, this.transform.rotation.y, (lookAtQuat * Quaternion.Euler(0, 0, 90)).z, this.transform.rotation.w);
-        }
-        else
-            this.gravityEffector.forceMagnitude = initialGravityForce;
+			//Vector3 directionToCurrentPlanetCenter = currentPlanet.transform.position - this.transform.position;
+			//Quaternion lookAtQuat = Quaternion.LookRotation(directionToCurrentPlanetCenter);
+			////this.transform.eulerAngles = new Vector3(this.transform.eulerAngles.x, this)
+			//this.transform.rotation = new Quaternion(this.transform.rotation.x, this.transform.rotation.y, (lookAtQuat * Quaternion.Euler(0, 0, 90)).z, this.transform.rotation.w);
+		} else {
+			Debug.Log ("Can't find planet." + initialGravityForce);
+			//this.gravityEffector.forceMagnitude = initialGravityForce;
+		}
         
         if (Input.GetKey(KeyCode.D))
         {
@@ -122,10 +140,12 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+		Debug.Log ("Colliding");
         if (collision.gameObject.GetComponent<Planet>() == null)
             return;
         if (isGrounded && currentPlanet != null)
             return;
+		Debug.Log ("Found a planet");
         currentPlanet = collision.gameObject;
         isGrounded = true;
         //nextJumpTime = Time.time + 0.5f;
@@ -135,6 +155,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject == currentPlanet)
         {
+			Debug.Log ("OnCollisionExit2D - currentPlanet set to null");
             currentPlanet = null;
             isGrounded = false;
         }

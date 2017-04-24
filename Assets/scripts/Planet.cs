@@ -14,17 +14,33 @@ public class Planet : MonoBehaviour
     //private PointEffector2D GravityEffector = null;
     public PlanetGravity PlanetGravity;
     public PlanetSizeManager PlanetSizeManager;
+	GameObject planet1;
+	GameObject planet2;
+	GameObject planet3;
 
     // Use this for initialization
     void Start()
     {
         PlanetGravity = GetComponentInChildren<PlanetGravity>();
         PlanetSizeManager = GetComponentInChildren<PlanetSizeManager>();
+		planet1 = GameObject.Find ("planet1");
+		planet2 = GameObject.Find ("planet2");
+		planet3 = GameObject.Find ("planet3");
+
     }
     
     // Update is called once per frame
     void Update()
     {
+		if (GameState.rightLeg) {
+			planet2.GetComponent<SpriteRenderer> ().sprite = Resources.Load<Sprite> ("sprites/bgs/deadplanet2");
+		}
+		if (GameState.leftLeg) {
+			planet1.GetComponent<SpriteRenderer> ().sprite = Resources.Load<Sprite> ("sprites/bgs/deadplanet1");
+		}
+		if (GameState.head) {
+			planet3.GetComponent<SpriteRenderer> ().sprite = Resources.Load<Sprite> ("sprites/bgs/deadplanet3");
+		}
         Player currentPlayer = GameState.GetPlayer();
         if(currentPlayer != null && PlanetGravity != null)
         {
@@ -52,4 +68,22 @@ public class Planet : MonoBehaviour
                 return PlanetSizeEnum.XS;
         }
     }
+
+	public string getPlanetSizeText() {
+		if (PlanetSizeManager == null) {
+			return "";
+		}
+		switch (this.PlanetSize) {
+		case PlanetSizeEnum.L:
+			return "L";
+		case PlanetSizeEnum.M:
+			return "M";
+		case PlanetSizeEnum.S:
+			return "S";
+		case PlanetSizeEnum.XS:
+			return "XS";
+
+		}
+		return "";
+	}
 }
