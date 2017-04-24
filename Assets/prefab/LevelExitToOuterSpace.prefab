@@ -9,72 +9,94 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1656333409403544}
+  m_RootGameObject: {fileID: 1768270051389522}
   m_IsPrefabParent: 1
---- !u!1 &1656333409403544
+--- !u!1 &1768270051389522
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4155254396372682}
-  - component: {fileID: 136310185703434610}
-  - component: {fileID: 114889162210178752}
-  - component: {fileID: 212622645935125950}
+  - component: {fileID: 4347124869015522}
+  - component: {fileID: 212312902460641072}
+  - component: {fileID: 50372593994277734}
+  - component: {fileID: 70250547431643072}
+  - component: {fileID: 114663594150201750}
   m_Layer: 12
-  m_Name: LevelExit
+  m_Name: LevelExitToOuterSpace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4155254396372682
+--- !u!4 &4347124869015522
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1656333409403544}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.33, y: -2.9250002, z: 0}
+  m_GameObject: {fileID: 1768270051389522}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -20.82, y: -15.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114889162210178752
+--- !u!50 &50372593994277734
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1768270051389522}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!70 &70250547431643072
+CapsuleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1768270051389522}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 2.66, y: 3.65}
+  m_Direction: 0
+--- !u!114 &114663594150201750
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1656333409403544}
+  m_GameObject: {fileID: 1768270051389522}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02c916315a829f5478e7ee6509ec1259, type: 3}
+  m_Script: {fileID: 11500000, guid: efe3b96e78ff46449a982a8d24547009, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   LevelToSwitchTo: outer_space
   SpawnPointToSpawnAt: Planet3_DungeonExit
   SwitchOnClick: 0
---- !u!136 &136310185703434610
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1656333409403544}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 1.33
-  m_Height: 3.65
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!212 &212622645935125950
+--- !u!212 &212312902460641072
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1656333409403544}
+  m_GameObject: {fileID: 1768270051389522}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
