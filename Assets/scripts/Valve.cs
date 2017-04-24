@@ -10,7 +10,7 @@ public class Valve : MonoBehaviour {
 		string id = gameObject.scene.name + gameObject.name;
 		Debug.Log ("Valve:  " + id);
 		if (GameState.gameDict.ContainsKey (id)) {
-			Debug.Log ("Valve restoring gamestate");
+			Debug.Log ("=======Valve restoring gamestate");
 			isOpen = GameState.gameDict [id].isOpen;
 			perform_valve_action ();
 		} else {
