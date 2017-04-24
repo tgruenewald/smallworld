@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -29,10 +30,13 @@ public class Player : MonoBehaviour
     private Vector3 startingPosition;
 
     public string NextTargetSpawnPoint { get; set; }
+	GameObject planetSizeDisplay;
 
     // Use this for initialization
     void Start ()
     {
+		planetSizeDisplay = GameObject.Find ("PlanetSize");
+		planetSizeDisplay.GetComponent<Text> ().text = "SIZE";
 		GroundCheck = GetComponent<CircleCollider2D>();
         Camera.main.GetComponent<SmoothCamera>().target = gameObject;
 		animator = GetComponent<Animator>();
@@ -44,6 +48,16 @@ public class Player : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
+	void updatePlanetSize() {
+		if (planetSizeDisplay == null) {
+			planetSizeDisplay = GameObject.Find ("PlanetSize");
+		}
+		if (planetSizeDisplay != null) {
+			planetSizeDisplay.GetComponent<Text> ().text = currentPlanet.GetComponentInParent<Planet> ().getPlanetSizeText ();
+		}
+
+	}
+
     // Update is called once per frame
     void Update ()
     {
@@ -53,6 +67,7 @@ public class Player : MonoBehaviour
 		WHAT_IS_GRAVITY_Y = Physics2D.gravity.y;
 		animator.SetBool("isWalking", false);
 		if (currentPlanet != null) {
+			updatePlanetSize ();
 			this.transform.up = -(currentPlanet.transform.position - this.transform.position);
 			PlanetGravity currentPlanetGravity = currentPlanet.GetComponentInChildren<PlanetGravity> ();
 			if (currentPlanetGravity != null) {

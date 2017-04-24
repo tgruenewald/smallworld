@@ -53,4 +53,22 @@ public class Planet : MonoBehaviour
                 return PlanetSizeEnum.XS;
         }
     }
+
+	public string getPlanetSizeText() {
+		if (PlanetSizeManager == null) {
+			return "";
+		}
+		switch (this.PlanetSize) {
+		case PlanetSizeEnum.L:
+			return "L";
+		case PlanetSizeEnum.M:
+			return "M";
+		case PlanetSizeEnum.S:
+			return "S";
+		case PlanetSizeEnum.XS:
+			return "XS";
+
+		}
+		return "";
+	}
 }
