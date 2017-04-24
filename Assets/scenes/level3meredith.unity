@@ -1398,6 +1398,7 @@ Transform:
   m_LocalPosition: {x: -2.99, y: 0.35, z: 0}
   m_LocalScale: {x: 0.5, y: 0.8749997, z: 1}
   m_Children:
+  - {fileID: 230025687}
   - {fileID: 1530214972}
   - {fileID: 307771312}
   - {fileID: 1902779181}
@@ -1405,7 +1406,6 @@ Transform:
   - {fileID: 1845786944}
   - {fileID: 987508280}
   - {fileID: 386927965}
-  - {fileID: 230025687}
   - {fileID: 1270088493}
   - {fileID: 1285522566}
   - {fileID: 2104294007}
@@ -2391,6 +2391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelToSwitchTo: jungle
+  SpawnPointToSpawnAt: 
   SwitchOnClick: 0
 --- !u!1 &1150492656
 GameObject:
@@ -2677,6 +2678,10 @@ Prefab:
       propertyPath: LevelAmbientSound
       value: 
       objectReference: {fileID: 8300000, guid: deac0913c1ffa044d8e082c95282c589, type: 3}
+    - target: {fileID: 11482060, guid: 37107bbf04ae0f94eb6661d87b0a64cc, type: 2}
+      propertyPath: SpawnPointName
+      value: entrance
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37107bbf04ae0f94eb6661d87b0a64cc, type: 2}
   m_IsPrefabParent: 0
@@ -3516,6 +3521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelToSwitchTo: jungle
+  SpawnPointToSpawnAt: 
   SwitchOnClick: 0
 --- !u!61 &1694616868
 BoxCollider2D:

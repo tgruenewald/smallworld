@@ -9,7 +9,7 @@ public class PlanetSizeManager : MonoBehaviour
     private bool shouldShrink = false;
     private Vector3 DefaultSizeScaleVector = new Vector3(1.0f, 1.0f, 1.0f);
     private readonly Vector3 GrowthSize = new Vector3(growsp, growsp, 0.0f);
-    private Transform SizeTransform = null;
+    public Transform SizeTransform = null;
     private float scalePercentage = 1.0f;
     public float ScalePercentage { get { return scalePercentage; } }
 

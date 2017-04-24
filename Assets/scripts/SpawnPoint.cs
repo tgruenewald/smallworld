@@ -9,6 +9,21 @@ public class SpawnPoint : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		var player = GameState.GetPlayer();
+		player.GetComponent<Rigidbody2D> ().bodyType = RigidbodyType2D.Dynamic;
+		Debug.Log ("Restorign planet state");
+		if (GameState.planet1 != null) {
+			Debug.Log ("==========================resettting planet1");
+			GameObject.Find ("planet1").GetComponent<Planet> ().PlanetSizeManager = GameState.planet1.PlanetSizeManager;
+		}
+		if (GameState.planet2 != null) {
+			Debug.Log ("(\"==========================resettting planet2");
+			GameObject.Find ("planet2").GetComponent<Planet> ().PlanetSizeManager = GameState.planet2.PlanetSizeManager;
+		}
+		if (GameState.planet3 != null) {
+			Debug.Log ("(\"==========================resettting planet3");
+			GameObject.Find ("planet3").GetComponent<Planet> ().PlanetSizeManager = GameState.planet3.PlanetSizeManager;
+		}
+
 		if (player != null)
 		{
             if (player.NextTargetSpawnPoint != this.SpawnPointName)
