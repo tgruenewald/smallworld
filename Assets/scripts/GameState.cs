@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public static class GameState
 {
@@ -11,6 +12,8 @@ public static class GameState
 	public static Vector3 planet1;
 	public static Vector3 planet2;
 	public static Vector3 planet3;
+	public static Dictionary<string, Valve> gameDict = new Dictionary<string, Valve> ();
+
 
 
 

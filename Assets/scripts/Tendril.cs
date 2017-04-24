@@ -19,6 +19,11 @@ public class Tendril : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (valve.GetComponent<Valve> ().isOpen) {
+			GetComponent<SpriteRenderer> ().sprite = highlight;
+		} else {
+			GetComponent<SpriteRenderer> ().sprite = old;
+		}
 		
 	}
 	void OnTriggerEnter2D(Collider2D col){
@@ -26,10 +31,8 @@ public class Tendril : MonoBehaviour {
 		
 		if (hasExited && timeStamp <= Time.time) {
 			timeStamp = Time.time + coolDownPeriodInSeconds;
-			//Animation animation = gameObject.GetComponent<Animation> ();
-			//animator.SetBool("play", true);
-			//animation.Play();
-			GetComponent<SpriteRenderer> ().sprite = highlight;
+
+			//GetComponent<SpriteRenderer> ().sprite = highlight;
 			valve.GetComponent<Valve> ().activate ();			
 			hasExited = false;
 		}
