@@ -37,9 +37,13 @@ public class Player : MonoBehaviour
         gravityEffector = GetComponent<PointEffector2D>();
         initialGravityForce = gravityEffector.forceMagnitude;
     }
-	
-	// Update is called once per frame
-	void Update ()
+    void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
+
+    // Update is called once per frame
+    void Update ()
     {
         PerformGroundCheck();
 		DEBUG_GROUNDED = IsGrounded;

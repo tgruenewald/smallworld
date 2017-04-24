@@ -8,18 +8,21 @@ public class SwitchLevel : MonoBehaviour {
     public string SpawnPointToSpawnAt = string.Empty;
 	public bool SwitchOnClick = false;
 
+    public static Planet.PlanetSizeEnum NextDungeonSize { get; set; }
+
 	void OnTriggerEnter2D(Collider2D coll)
 	{
 		if (SwitchOnClick)
 			return;
 
-		SwitchLevel.SwitchToLevel(coll.gameObject, LevelToSwitchTo, SpawnPointToSpawnAt);
+        UpdateNextDungeonSize();
+        SwitchLevel.SwitchToLevel(coll.gameObject, LevelToSwitchTo, SpawnPointToSpawnAt);
 	}
 
 	public static void SwitchToLevel(GameObject playerObject, string level, string spawnPointToSpawnAt)
 	{
 		GameState.SetPlayer(playerObject);
-        playerObject.GetComponent<Player>().NextTargetSpawnPoint = spawnPointToSpawnAt;
+        GameState.GetPlayer().NextTargetSpawnPoint = spawnPointToSpawnAt;
         //GameState.GetPlayer().StopAllAudio();
         SceneManager.LoadScene(level);
 	}
@@ -28,8 +31,16 @@ public class SwitchLevel : MonoBehaviour {
 	{
 		if (Input.GetMouseButtonDown(0) && SwitchOnClick)
 		{
+            UpdateNextDungeonSize();
             SwitchLevel.SwitchToLevel(GameState.GetPlayer().gameObject, LevelToSwitchTo, SpawnPointToSpawnAt);
 			//SceneManager.LoadScene(LevelToSwitchTo);    
 		}
 	}
+
+    private void UpdateNextDungeonSize()
+    {
+        var currentPlanet = this.GetComponentInParent<Planet>();
+        if (currentPlanet != null)
+            NextDungeonSize = currentPlanet.PlanetSize;
+    }
 }
