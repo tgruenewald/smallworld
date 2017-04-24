@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4605574040178446}
   - component: {fileID: 212405885531314764}
   - component: {fileID: 114963117006055466}
-  - component: {fileID: 58172602796208276}
   - component: {fileID: 114534889216997044}
   - component: {fileID: 95422790987508238}
+  - component: {fileID: 70909937288542782}
   m_Layer: 0
   m_Name: valve
   m_TagString: Untagged
@@ -44,8 +44,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &58172602796208276
-CircleCollider2D:
+--- !u!70 &70909937288542782
+CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -55,9 +55,9 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.3972158
+  m_Offset: {x: 0.00689888, y: -0.04139805}
+  m_Size: {x: 2.2874143, y: 3.4568086}
+  m_Direction: 0
 --- !u!95 &95422790987508238
 Animator:
   serializedVersion: 3
@@ -83,7 +83,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1797248272687960}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 853447f492833ef419c34783a7bd04c5, type: 3}
+  m_Script: {fileID: 11500000, guid: 1bc6db08805c6704785a3ef2fbe8528a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114963117006055466
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1797248272687960}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 1059de4a7ee66ea44bb0d2167d9025d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212405885531314764
