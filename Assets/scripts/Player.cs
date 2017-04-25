@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -32,6 +33,15 @@ public class Player : MonoBehaviour
     public string NextTargetSpawnPoint { get; set; }
 	GameObject planetSizeDisplay;
 
+    private HashSet<AlienPickup.AlienBodyPartType> alienBodyParts;
+    public HashSet<AlienPickup.AlienBodyPartType> GetAlienBodyParts() { return alienBodyParts; }
+    public void PickedUpAlienBodyPart(AlienPickup.AlienBodyPartType part)
+    {
+        alienBodyParts.Add(part);
+        if (alienBodyParts.Count == 3)
+            SwitchLevel.SwitchToLevel(this.gameObject, "Ending", string.Empty, null);
+    }
+
     // Use this for initialization
     void Start ()
     {
@@ -42,6 +52,7 @@ public class Player : MonoBehaviour
 		animator = GetComponent<Animator>();
         gravityEffector = GetComponent<PointEffector2D>();
         initialGravityForce = gravityEffector.forceMagnitude;
+        alienBodyParts = new HashSet<AlienPickup.AlienBodyPartType>();
     }
     void Awake()
     {

@@ -14,33 +14,39 @@ public class Planet : MonoBehaviour
     //private PointEffector2D GravityEffector = null;
     public PlanetGravity PlanetGravity;
     public PlanetSizeManager PlanetSizeManager;
-	GameObject planet1;
-	GameObject planet2;
-	GameObject planet3;
+    public AlienPickup.AlienBodyPartType AlienBodyPart;
+    public Sprite DeadSprite;
+
+    private SpriteRenderer ourSpriteRenderer;
 
     // Use this for initialization
     void Start()
     {
         PlanetGravity = GetComponentInChildren<PlanetGravity>();
         PlanetSizeManager = GetComponentInChildren<PlanetSizeManager>();
-		planet1 = GameObject.Find ("planet1");
-		planet2 = GameObject.Find ("planet2");
-		planet3 = GameObject.Find ("planet3");
-
+        ourSpriteRenderer = GetComponent<SpriteRenderer>();
     }
     
     // Update is called once per frame
     void Update()
     {
-		if (GameState.rightLeg) {
-			planet2.GetComponent<SpriteRenderer> ().sprite = Resources.Load<Sprite> ("sprites/bgs/deadplanet2");
-		}
-		if (GameState.leftLeg) {
-			planet1.GetComponent<SpriteRenderer> ().sprite = Resources.Load<Sprite> ("sprites/bgs/deadplanet1");
-		}
-		if (GameState.head) {
-			planet3.GetComponent<SpriteRenderer> ().sprite = Resources.Load<Sprite> ("sprites/bgs/deadplanet3");
-		}
+        var player = GameState.GetPlayer();
+        if(player != null && ourSpriteRenderer != null)
+        {
+            if(player.GetAlienBodyParts().Contains(AlienBodyPart) && ourSpriteRenderer.sprite != DeadSprite)
+            {
+                GetComponentInParent<SpriteRenderer>().sprite = DeadSprite;
+            }
+        }
+		//if (GameState.rightLeg) {
+		//	planet2.GetComponent<SpriteRenderer> ().sprite = Resources.Load<Sprite> ("sprites/bgs/deadplanet2");
+		//}
+		//if (GameState.leftLeg) {
+		//	planet1.GetComponent<SpriteRenderer> ().sprite = Resources.Load<Sprite> ("sprites/bgs/deadplanet1");
+		//}
+		//if (GameState.head) {
+		//	planet3.GetComponent<SpriteRenderer> ().sprite = Resources.Load<Sprite> ("sprites/bgs/deadplanet3");
+		//}
         Player currentPlayer = GameState.GetPlayer();
         if(currentPlayer != null && PlanetGravity != null)
         {
