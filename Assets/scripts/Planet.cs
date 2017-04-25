@@ -35,7 +35,7 @@ public class Planet : MonoBehaviour
         {
             if(player.GetAlienBodyParts().Contains(AlienBodyPart) && ourSpriteRenderer.sprite != DeadSprite)
             {
-                GetComponentInParent<SpriteRenderer>().sprite = DeadSprite;
+                ourSpriteRenderer.sprite = DeadSprite;
             }
         }
 		//if (GameState.rightLeg) {
