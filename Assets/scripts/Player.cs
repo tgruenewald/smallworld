@@ -39,6 +39,7 @@ public class Player : MonoBehaviour
     public void PickedUpAlienBodyPart(AlienPickup.AlienBodyPartType part)
     {
         alienBodyParts.Add(part);
+		Debug.Log ("ADDED ANOTHER BODY PART");
         if (alienBodyParts.Count == 3)
             SwitchLevel.SwitchToLevel(this.gameObject, "Ending", string.Empty, null);
     }

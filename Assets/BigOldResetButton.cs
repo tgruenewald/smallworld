@@ -29,7 +29,7 @@ public class BigOldResetButton : MonoBehaviour {
 			if (GameState.jetBlasts > 0) {
 				GameState.jetBlasts--;
 				droplet dpt = d.GetComponent<droplet> ();
-				dpt.doJump (20f);
+				dpt.doJump (30f);
 			}
 		}
 	}

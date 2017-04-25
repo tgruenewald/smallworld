@@ -14,7 +14,7 @@ public static class GameState
 	public static Vector3 planet3;
 	public static HashSet<string> valveList = new HashSet<string> ();
 	public static bool freeze = false;
-	public static int jetBlasts = 5;
+	public static int jetBlasts = 7;
 
 	public static void SetPlayer(GameObject player)
     {
