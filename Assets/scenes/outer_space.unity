@@ -556,6 +556,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlanetGravity: {fileID: 1165019052}
   PlanetSizeManager: {fileID: 0}
+  AlienBodyPart: 0
+  DeadSprite: {fileID: 0}
 --- !u!114 &382418686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -570,6 +572,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlanetGravity: {fileID: 1165019052}
   PlanetSizeManager: {fileID: 0}
+  AlienBodyPart: 0
+  DeadSprite: {fileID: 0}
 --- !u!50 &382418687
 Rigidbody2D:
   serializedVersion: 4
@@ -1477,7 +1481,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlanetGravity: {fileID: 1378427746}
-  PlanetSizeManager: {fileID: 0}
+  PlanetSizeManager: {fileID: 1633271169}
+  AlienBodyPart: 1
+  DeadSprite: {fileID: 21300000, guid: 8e844d8373a4ffe4fb1597f863c8ba74, type: 3}
 --- !u!1 &1105789303
 GameObject:
   m_ObjectHideFlags: 0
@@ -2069,7 +2075,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlanetGravity: {fileID: 869935919}
-  PlanetSizeManager: {fileID: 0}
+  PlanetSizeManager: {fileID: 832256742}
+  AlienBodyPart: 0
+  DeadSprite: {fileID: 21300000, guid: cb0d5bf8a54387d4b96779189aa7ec09, type: 3}
 --- !u!1 &1633271166
 GameObject:
   m_ObjectHideFlags: 0
@@ -2605,7 +2613,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlanetGravity: {fileID: 312838295}
-  PlanetSizeManager: {fileID: 0}
+  PlanetSizeManager: {fileID: 1315160730}
+  AlienBodyPart: 2
+  DeadSprite: {fileID: 21300000, guid: 8fea5edfb085ccb40a74e6a525630c75, type: 3}
 --- !u!50 &2052326071
 Rigidbody2D:
   serializedVersion: 4
