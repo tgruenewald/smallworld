@@ -450,7 +450,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -80, y: -195}
+  m_AnchoredPosition: {x: -121, y: -227}
   m_SizeDelta: {x: 949, y: 132}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1717095600
@@ -487,11 +487,11 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "\t\tWhen you place the final specimen in your pack, the pack begins to
     vibrate. The parts that you collected fuse together to create a small, tentacled
-    creature that rises into the air. \n\t\t<Behold! It is I! Zarcon!> \tThe creature
+    creature that rises into the air. \n\t\t<Behold! It is I! Zoltcon!> \tThe creature
     speaks directly into your mind. Very loudly. <My kin trapped me here and used
     these planets to siphon away my life energies. You freed me! Allow me to reward
     you!>\n\t\t<Grant me riches beyond my wildest dreams!> you think. \n\t\t<Done!
-    I grant you the wealth of my constant presence in your life!> Zarcon attaches
+    I grant you the wealth of my constant presence in your life!> Zoltcon attaches
     to your ship and provides cheerful commentary as you hop from planet to planet.
     You  never dreamed this would happen! ~The End~"
 --- !u!222 &1717095601
