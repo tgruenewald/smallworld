@@ -23,14 +23,10 @@ public class SwitchLevel : MonoBehaviour {
 	public static void SwitchToLevel(GameObject playerObject, string level, string spawnPointToSpawnAt, Planet planet)
 	{
 		GameState.SetPlayer(playerObject);
-		Debug.Log ("savign planet state");
-		GameState.planet1 = GameObject.Find("planet1").GetComponent<Planet>().PlanetSizeManager.SizeTransform.localScale;
-		GameState.planet2 = GameObject.Find("planet2").GetComponent<Planet>().PlanetSizeManager.SizeTransform.localScale;
-		GameState.planet3 = GameObject.Find("planet3").GetComponent<Planet>().PlanetSizeManager.SizeTransform.localScale;
-
 
         GameState.GetPlayer().NextTargetSpawnPoint = spawnPointToSpawnAt;
 		playerObject.GetComponent<Rigidbody2D> ().bodyType = RigidbodyType2D.Static;
+		GameState.freeze = true;
         //GameState.GetPlayer().StopAllAudio();
 		Debug.Log("Scene: " + level);
         SceneManager.LoadScene(level);

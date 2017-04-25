@@ -18,6 +18,6 @@ public class SpaceWall : MonoBehaviour {
         //Debug.Log(string.Format("{0} touched space wall {1}", coll.gameObject.name, this.name));
         if (coll.gameObject.tag != "Player")
             return;
-        SceneManager.LoadScene("outer_space"); 
+		BigOldResetButton.Reset ();
 	}
 }

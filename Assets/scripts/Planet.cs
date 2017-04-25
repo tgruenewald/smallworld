@@ -33,7 +33,7 @@ public class Planet : MonoBehaviour
         var player = GameState.GetPlayer();
         if(player != null && ourSpriteRenderer != null)
         {
-            if(player.GetAlienBodyParts().Contains(AlienBodyPart) && ourSpriteRenderer.sprite != DeadSprite)
+			if(player.GetAlienBodyParts() != null && player.GetAlienBodyParts().Contains(AlienBodyPart) && ourSpriteRenderer.sprite != DeadSprite)
             {
                 ourSpriteRenderer.sprite = DeadSprite;
             }

@@ -8,7 +8,8 @@ public class AlienPickup : MonoBehaviour
     {
         LeftLeg,
         RightLeg,
-        Head
+        Head,
+		None
     };
 
     public AlienBodyPartType AlienBodyPart;

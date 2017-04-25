@@ -66,6 +66,9 @@ public class droplet : MonoBehaviour {
 		DontDestroyOnLoad (this.gameObject);
 
     }
+	public void doJump(float x) {
+		GetComponent<Rigidbody2D>().AddForce(new Vector2(x, JumpForce));
+	}
 
     // Use this for initialization
     void Start () {
@@ -131,7 +134,7 @@ public class droplet : MonoBehaviour {
 		if (state != DropletState.Gas && state != DropletState.Ice && grounded && Input.GetButtonDown("Jump") && canMove)
         {
 			
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, JumpForce));
+			doJump (0f);
         }
 
 			

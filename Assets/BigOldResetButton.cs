@@ -8,13 +8,7 @@ public class BigOldResetButton : MonoBehaviour {
 	void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-	public void onClick() {
-		Debug.Log ("============================================================");
+	public static void Reset() {
 		var otherPlayers = GameObject.FindObjectsOfType<Player>();
 		Debug.Log(string.Format("Amount of player in scene: {0}", otherPlayers.Length));
 		for(int i = 0; i < otherPlayers.Length; ++i)
@@ -23,5 +17,24 @@ public class BigOldResetButton : MonoBehaviour {
 			Destroy(otherPlayer.gameObject);
 		}
 		SceneManager.LoadScene("outer_space"); 		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+	public void rocketBlast() {
+		var d = GameObject.Find ("droplet_player");
+		if (d != null) {
+			if (GameState.jetBlasts > 0) {
+				GameState.jetBlasts--;
+				droplet dpt = d.GetComponent<droplet> ();
+				dpt.doJump (20f);
+			}
+		}
+	}
+	public void onClick() {
+		Debug.Log ("============================================================");
+		BigOldResetButton.Reset ();
 	}
 }

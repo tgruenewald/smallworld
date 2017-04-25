@@ -33,6 +33,7 @@ public class Player : MonoBehaviour
     public string NextTargetSpawnPoint { get; set; }
 	GameObject planetSizeDisplay;
 
+
     private HashSet<AlienPickup.AlienBodyPartType> alienBodyParts;
     public HashSet<AlienPickup.AlienBodyPartType> GetAlienBodyParts() { return alienBodyParts; }
     public void PickedUpAlienBodyPart(AlienPickup.AlienBodyPartType part)
@@ -45,6 +46,7 @@ public class Player : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
+		Debug.Log ("STARTING TESTYYYY ----------------------------");
 		planetSizeDisplay = GameObject.Find ("PlanetSize");
 		planetSizeDisplay.GetComponent<Text> ().text = "SIZE";
 		GroundCheck = GetComponent<CircleCollider2D>();
@@ -72,6 +74,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update ()
     {
+		if (GameState.freeze)
+			return;
         PerformGroundCheck();
 		DEBUG_GROUNDED = IsGrounded;
 		WHAT_IS_GRAVITY_X = Physics2D.gravity.x;
@@ -81,8 +85,10 @@ public class Player : MonoBehaviour
 			updatePlanetSize ();
 			this.transform.up = -(currentPlanet.transform.position - this.transform.position);
 			PlanetGravity currentPlanetGravity = currentPlanet.GetComponentInChildren<PlanetGravity> ();
-			if (currentPlanetGravity != null) {
+			if (!float.IsNaN(currentPlanetGravity.ForceScale) && currentPlanetGravity != null) {
 				this.gravityEffector.forceMagnitude = initialGravityForce * currentPlanetGravity.ForceScale;
+			} else {
+				this.gravityEffector.forceMagnitude = initialGravityForce;
 			}
 
 			//Vector3 directionToCurrentPlanetCenter = currentPlanet.transform.position - this.transform.position;

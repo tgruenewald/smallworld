@@ -535,7 +535,6 @@ GameObject:
   - component: {fileID: 382418688}
   - component: {fileID: 382418687}
   - component: {fileID: 382418686}
-  - component: {fileID: 382418685}
   m_Layer: 12
   m_Name: HomePlanet
   m_TagString: Untagged
@@ -543,21 +542,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &382418685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 382418684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02a94ec750a7e794281bf5c3f4201da1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlanetGravity: {fileID: 1165019052}
-  PlanetSizeManager: {fileID: 0}
-  AlienBodyPart: 0
-  DeadSprite: {fileID: 0}
 --- !u!114 &382418686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -572,7 +556,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlanetGravity: {fileID: 1165019052}
   PlanetSizeManager: {fileID: 0}
-  AlienBodyPart: 0
+  AlienBodyPart: 3
   DeadSprite: {fileID: 0}
 --- !u!50 &382418687
 Rigidbody2D:

@@ -6,10 +6,12 @@ public class HudDisplay : MonoBehaviour {
 	GameObject leftLeg;
 	GameObject rightLeg;
 	GameObject head;
+	GameObject jetBlastsText;
     private Player gamePlayer;
 	// Use this for initialization
 	void Start ()
     {
+		jetBlastsText = GameObject.Find ("JetBlastsRemaining");
         gamePlayer = GameState.GetPlayer();
 		rightLeg = GameObject.Find ("RightLegDisplay");
 		leftLeg = GameObject.Find ("LeftLegDisplay");
@@ -19,6 +21,9 @@ public class HudDisplay : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+		if (jetBlastsText != null) {
+			jetBlastsText.GetComponent<Text> ().text = "" + GameState.jetBlasts;
+		}
         if (gamePlayer == null)
             return;
 
