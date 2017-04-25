@@ -129,14 +129,10 @@ public class droplet : MonoBehaviour {
         {
             animator.SetBool("isWalking", false);
         }
-
-		//Can't jump while in gas state
-		if (state != DropletState.Gas && state != DropletState.Ice && grounded && Input.GetButtonDown("Jump") && canMove)
-        {
-			
+		if (grounded && Input.GetButtonDown("Jump") && canMove)
+		{
 			doJump (0f);
-        }
-
+		}
 			
     }
 

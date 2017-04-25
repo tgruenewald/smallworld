@@ -385,7 +385,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 491, y: 26}
+  m_AnchoredPosition: {x: 521, y: 26}
   m_SizeDelta: {x: 484, y: 288}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &293051101
@@ -425,7 +425,8 @@ MonoBehaviour:
     Gruenewald\t\t     Programming\nJarkko Ahvenniemi\t\t         Music\r\nHenna Ahvenniemi\t\t
     \        Art\r\nTamara Gruenewald\t\t     Character Design\nMelissa Gruenewald
     \            Character Design\nMingi Webber                       Art & Animation\nEric
-    Meyer                            Art & Animation\n\n"
+    Meyer                            Art & Animation\n\nCreated for Ludum Dare 38
+    -- April 2017\n"
 --- !u!222 &293051102
 CanvasRenderer:
   m_ObjectHideFlags: 0
