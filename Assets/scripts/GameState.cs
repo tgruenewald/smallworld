@@ -12,7 +12,7 @@ public static class GameState
 	public static Vector3 planet1;
 	public static Vector3 planet2;
 	public static Vector3 planet3;
-	public static Dictionary<string, Valve> gameDict = new Dictionary<string, Valve> ();
+	public static HashSet<string> valveList = new HashSet<string> ();
 	public static bool rightLeg = false;
 	public static bool leftLeg = false;
 	public static bool head = false;
