@@ -14,6 +14,10 @@ public class Credits : MonoBehaviour {
 		
 	}
 
+	public void clickEndScene() {
+		SceneManager.LoadScene ("ending");
+	}
+
 	public void clickBack() {
 		SceneManager.LoadScene ("title");
 		
