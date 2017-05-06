@@ -16,7 +16,7 @@ public class Title : MonoBehaviour {
 	}
 
 	public void clickStart() {
-		SceneManager.LoadScene ("outer_space");
+		SceneManager.LoadScene ("tutorial");
 	}
 
 	public void clickCredits() {
