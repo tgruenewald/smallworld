@@ -68,10 +68,8 @@ public class Planet : MonoBehaviour
                 return PlanetSizeEnum.L;
             else if (scale < 0.75f && scale >= 0.5f)
                 return PlanetSizeEnum.M;
-            else if (scale < 0.5f && scale >= 0.25f)
+            else 
                 return PlanetSizeEnum.S;
-            else
-                return PlanetSizeEnum.XS;
         }
     }
 

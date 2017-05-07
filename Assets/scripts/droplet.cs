@@ -63,7 +63,7 @@ public class droplet : MonoBehaviour {
 	//Keep the player betweens levels.  After a game over, we will
 	//find and destroy the current player so that lives, etc, are reset.
 	void Awake(){
-		DontDestroyOnLoad (this.gameObject);
+		//DontDestroyOnLoad (this.gameObject);
 
     }
 	public void doJump(float x) {

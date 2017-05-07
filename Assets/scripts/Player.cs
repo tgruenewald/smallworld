@@ -34,13 +34,13 @@ public class Player : MonoBehaviour
 	GameObject planetSizeDisplay;
 
 
-    private HashSet<AlienPickup.AlienBodyPartType> alienBodyParts;
-    public HashSet<AlienPickup.AlienBodyPartType> GetAlienBodyParts() { return alienBodyParts; }
+    //private HashSet<AlienPickup.AlienBodyPartType> alienBodyParts;
+    public HashSet<AlienPickup.AlienBodyPartType> GetAlienBodyParts() { return GameState.alienBodyParts; }
     public void PickedUpAlienBodyPart(AlienPickup.AlienBodyPartType part)
     {
-        alienBodyParts.Add(part);
+		GameState.alienBodyParts.Add(part);
 		Debug.Log ("ADDED ANOTHER BODY PART");
-        if (alienBodyParts.Count == 3)
+		if (GameState.alienBodyParts.Count == 3)
             SwitchLevel.SwitchToLevel(this.gameObject, "Ending", string.Empty, null);
     }
 
@@ -49,13 +49,13 @@ public class Player : MonoBehaviour
     {
 		Debug.Log ("STARTING TESTYYYY ----------------------------");
 		planetSizeDisplay = GameObject.Find ("PlanetSize");
-		planetSizeDisplay.GetComponent<Text> ().text = "SIZE";
+		planetSizeDisplay.GetComponent<Text> ().text = "";
 		GroundCheck = GetComponent<CircleCollider2D>();
         Camera.main.GetComponent<SmoothCamera>().target = gameObject;
 		animator = GetComponent<Animator>();
         gravityEffector = GetComponent<PointEffector2D>();
         initialGravityForce = gravityEffector.forceMagnitude;
-        alienBodyParts = new HashSet<AlienPickup.AlienBodyPartType>();
+        //alienBodyParts = new HashSet<AlienPickup.AlienBodyPartType>();
     }
     void Awake()
     {
@@ -97,7 +97,7 @@ public class Player : MonoBehaviour
 			////this.transform.eulerAngles = new Vector3(this.transform.eulerAngles.x, this)
 			//this.transform.rotation = new Quaternion(this.transform.rotation.x, this.transform.rotation.y, (lookAtQuat * Quaternion.Euler(0, 0, 90)).z, this.transform.rotation.w);
 		} else {
-			Debug.Log ("Can't find planet." + initialGravityForce);
+//			Debug.Log ("Can't find planet." + initialGravityForce);
 			//this.gravityEffector.forceMagnitude = initialGravityForce;
 		}
         

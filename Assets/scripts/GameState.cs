@@ -9,12 +9,13 @@ public static class GameState
     private static GameObject player = null;
     public static GameObject introMusic = null;
 	private static Transform planetSize = null;
-	public static Vector3 planet1;
-	public static Vector3 planet2;
-	public static Vector3 planet3;
+	public static Dictionary<string, Vector3> planetSizeDict = new Dictionary<string, Vector3> ();
+	public static Dictionary<string, float> planetScaleDict = new Dictionary<string, float> ();
 	public static HashSet<string> valveList = new HashSet<string> ();
+	public static HashSet<AlienPickup.AlienBodyPartType> alienBodyParts  = new HashSet<AlienPickup.AlienBodyPartType>();
 	public static bool freeze = false;
 	public static int jetBlasts = 7;
+
 
 	public static void SetPlayer(GameObject player)
     {
