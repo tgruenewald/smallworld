@@ -49,7 +49,7 @@ public class Player : MonoBehaviour
     {
 		Debug.Log ("STARTING TESTYYYY ----------------------------");
 		planetSizeDisplay = GameObject.Find ("PlanetSize");
-		planetSizeDisplay.GetComponent<Text> ().text = "SIZE";
+		planetSizeDisplay.GetComponent<Text> ().text = "";
 		GroundCheck = GetComponent<CircleCollider2D>();
         Camera.main.GetComponent<SmoothCamera>().target = gameObject;
 		animator = GetComponent<Animator>();
@@ -97,7 +97,7 @@ public class Player : MonoBehaviour
 			////this.transform.eulerAngles = new Vector3(this.transform.eulerAngles.x, this)
 			//this.transform.rotation = new Quaternion(this.transform.rotation.x, this.transform.rotation.y, (lookAtQuat * Quaternion.Euler(0, 0, 90)).z, this.transform.rotation.w);
 		} else {
-			Debug.Log ("Can't find planet." + initialGravityForce);
+//			Debug.Log ("Can't find planet." + initialGravityForce);
 			//this.gravityEffector.forceMagnitude = initialGravityForce;
 		}
         
