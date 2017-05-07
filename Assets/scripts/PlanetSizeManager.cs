@@ -64,7 +64,7 @@ public class PlanetSizeManager : MonoBehaviour
     {
         if (shouldShrink)
         {
-			if (SizeTransform.localScale.x > 1.5) {
+			if (SizeTransform.localScale.x > 1.4) { // limit shrinkage
 				SizeTransform.localScale -= GrowthSize;
 				GameState.planetSizeDict[this.transform.parent.name] = SizeTransform.localScale;
 				//Debug.Log ("planet size " + SizeTransform.localScale);				
