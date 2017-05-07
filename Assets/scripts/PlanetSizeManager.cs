@@ -26,7 +26,7 @@ public class PlanetSizeManager : MonoBehaviour
 		SizeTransform = this.transform.parent.gameObject.transform;
 		if (!GameState.planetSizeDict.ContainsKey (this.transform.parent.name)) {
 			// then save the current size
-			GameState.planetSizeDict.Add (this.transform.parent.name, new Vector3 (SizeTransform.localScale.x, SizeTransform.localScale.y, SizeTransform.localScale.z));
+			GameState.planetSizeDict.Add (this.transform.parent.name, SizeTransform.localScale);//new Vector3 (SizeTransform.localScale.x, SizeTransform.localScale.y, SizeTransform.localScale.z));
 		} else {
 			// then get the last planet scale.
 			SizeTransform.localScale = GameState.planetSizeDict [this.transform.parent.name];
@@ -66,7 +66,6 @@ public class PlanetSizeManager : MonoBehaviour
         {
 			if (SizeTransform.localScale.x > 1.4) { // limit shrinkage
 				SizeTransform.localScale -= GrowthSize;
-				GameState.planetSizeDict[this.transform.parent.name] = SizeTransform.localScale;
 				//Debug.Log ("planet size " + SizeTransform.localScale);				
 			}
 
@@ -84,6 +83,7 @@ public class PlanetSizeManager : MonoBehaviour
             //GravityEffector.forceMagnitude += grvgrow;
         }
         scalePercentage = SizeTransform.localScale.x / DefaultSizeScaleVector.x; //x or y, it shouldn't matter
+		GameState.planetSizeDict[this.transform.parent.name] = SizeTransform.localScale;
 		GameState.planetScaleDict[this.transform.parent.name] = scalePercentage;
     }
 }
