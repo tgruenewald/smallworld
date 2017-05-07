@@ -53,9 +53,6 @@ public class Dungeon : MonoBehaviour
             case Planet.PlanetSizeEnum.S:
                 factor = 1.2f;
                 break;
-            case Planet.PlanetSizeEnum.XS:
-                factor = 0.5f;
-                break;
         }
         return factor;
     }

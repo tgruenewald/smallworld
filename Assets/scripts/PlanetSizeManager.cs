@@ -41,7 +41,11 @@ public class PlanetSizeManager : MonoBehaviour
     {
         if (shouldShrink)
         {
-            SizeTransform.localScale -= GrowthSize;
+			if (SizeTransform.localScale.x > 1.5) {
+				SizeTransform.localScale -= GrowthSize;
+				Debug.Log ("planet size " + SizeTransform.localScale);				
+			}
+
             //if (PlanetGravity != null)
             //    PlanetGravity.GravityEffector.forceMagnitude -= grvgrow;
             //GravityEffector.forceMagnitude -= grvgrow;
