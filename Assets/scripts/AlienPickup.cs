@@ -17,7 +17,10 @@ public class AlienPickup : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-		
+		if (GameState.alienBodyParts.Contains (AlienBodyPart)) {
+			GetComponent<SpriteRenderer>().enabled = false;
+			GetComponent<CapsuleCollider2D>().enabled = false;			
+		}
 	}
 	
 	// Update is called once per frame

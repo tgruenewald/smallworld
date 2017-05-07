@@ -34,13 +34,13 @@ public class Player : MonoBehaviour
 	GameObject planetSizeDisplay;
 
 
-    private HashSet<AlienPickup.AlienBodyPartType> alienBodyParts;
-    public HashSet<AlienPickup.AlienBodyPartType> GetAlienBodyParts() { return alienBodyParts; }
+    //private HashSet<AlienPickup.AlienBodyPartType> alienBodyParts;
+    public HashSet<AlienPickup.AlienBodyPartType> GetAlienBodyParts() { return GameState.alienBodyParts; }
     public void PickedUpAlienBodyPart(AlienPickup.AlienBodyPartType part)
     {
-        alienBodyParts.Add(part);
+		GameState.alienBodyParts.Add(part);
 		Debug.Log ("ADDED ANOTHER BODY PART");
-        if (alienBodyParts.Count == 3)
+		if (GameState.alienBodyParts.Count == 3)
             SwitchLevel.SwitchToLevel(this.gameObject, "Ending", string.Empty, null);
     }
 
@@ -55,7 +55,7 @@ public class Player : MonoBehaviour
 		animator = GetComponent<Animator>();
         gravityEffector = GetComponent<PointEffector2D>();
         initialGravityForce = gravityEffector.forceMagnitude;
-        alienBodyParts = new HashSet<AlienPickup.AlienBodyPartType>();
+        //alienBodyParts = new HashSet<AlienPickup.AlienBodyPartType>();
     }
     void Awake()
     {
